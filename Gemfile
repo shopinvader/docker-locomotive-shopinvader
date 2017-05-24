@@ -54,4 +54,5 @@ end
 
 group :production do
   gem 'carrierwave-aws'
+  gem 'rails_12factor'
 end
