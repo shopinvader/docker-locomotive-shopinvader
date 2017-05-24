@@ -36,7 +36,7 @@ gem 'puma'
 gem 'custom_fields', github: 'locomotivecms/custom_fields', ref: '36b79ea91b896abdc5c863f898b16dd1e9ae9756'
 gem 'locomotivecms_steam', github: 'locomotivecms/steam', ref: '0b2fab03029872cf3b4f73336ae8fc2d241e06af', require: false
 gem 'locomotivecms', github: 'locomotivecms/engine', ref: '71f0b0c5c42b6d35751e81ca9d66ac1317b115e4'
-gem 'shop_invader', github: 'akretion/shopinvader', ref: '7f79368f8a5e217dd104caaa0d0d54cbf99fc033', branch: 'add-erp-proxy'
+gem 'shop_invader', github: 'akretion/shopinvader', ref: 'bce7865fff3e8d6abd670e4215889969da89f466', branch: 'add-erp-proxy'
 
 
 group :development, :test do
