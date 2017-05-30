@@ -4,6 +4,6 @@ LABEL maintainer "sebastien.beau@akretion.com"
 
 USER root
 ADD . /workspace
-RUN bundle install && mkdir tmp log && chown ubuntu:ubuntu tmp log
+RUN bundle install && mkdir -p tmp log && chown ubuntu:ubuntu tmp log
 USER ubuntu
 CMD rails s --binding=0.0.0.0
