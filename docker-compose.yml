@@ -1,0 +1,14 @@
+services:
+  db:
+    image: mongo:3
+    volumes:
+      - .db:/data/db
+  locomotive:
+    ports:
+      - 3000:3000
+    build: .
+    volumes:
+      - ./log:/workspace/log
+    links:
+    - db
+version: '2'
