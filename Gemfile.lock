@@ -1,7 +1,7 @@
 GIT
-  remote: git://github.com/akretion/shopinvader.git
-  revision: bce7865fff3e8d6abd670e4215889969da89f466
-  ref: bce7865fff3e8d6abd670e4215889969da89f466
+  remote: https://github.com/akretion/shopinvader.git
+  revision: e21b72b2fb744b49d8f5da3202edd0f85e3f9baa
+  ref: e21b72b2fb744b49d8f5da3202edd0f85e3f9baa
   branch: add-erp-proxy
   specs:
     shop_invader (0.1.0)
@@ -9,7 +9,7 @@ GIT
       faraday (~> 0.11.0)
 
 GIT
-  remote: git://github.com/locomotivecms/custom_fields.git
+  remote: https://github.com/locomotivecms/custom_fields.git
   revision: 36b79ea91b896abdc5c863f898b16dd1e9ae9756
   ref: 36b79ea91b896abdc5c863f898b16dd1e9ae9756
   specs:
@@ -21,7 +21,7 @@ GIT
       mongoid (~> 5.2.0)
 
 GIT
-  remote: git://github.com/locomotivecms/engine.git
+  remote: https://github.com/locomotivecms/engine.git
   revision: 71f0b0c5c42b6d35751e81ca9d66ac1317b115e4
   ref: 71f0b0c5c42b6d35751e81ca9d66ac1317b115e4
   specs:
@@ -63,7 +63,7 @@ GIT
       slim (~> 3.0.7)
 
 GIT
-  remote: git://github.com/locomotivecms/steam.git
+  remote: https://github.com/locomotivecms/steam.git
   revision: 0b2fab03029872cf3b4f73336ae8fc2d241e06af
   ref: 0b2fab03029872cf3b4f73336ae8fc2d241e06af
   specs:
@@ -299,7 +299,7 @@ GEM
       money (~> 6.8)
     money (6.9.0)
       i18n (>= 0.6.4, < 0.9)
-    mongo (2.4.1)
+    mongo (2.4.2)
       bson (>= 4.2.1, < 5.0.0)
     mongo_session_store-rails4 (6.0.0)
       actionpack (>= 3.1)
@@ -322,7 +322,7 @@ GEM
     nokogumbo (1.4.11)
       nokogiri
     nprogress-rails (0.1.6.8)
-    origin (2.3.0)
+    origin (2.3.1)
     orm_adapter (0.5.0)
     pony (1.11)
       mail (>= 2.0)
