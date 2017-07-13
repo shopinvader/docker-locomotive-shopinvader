@@ -1,8 +1,6 @@
 GIT
   remote: https://github.com/akretion/shopinvader.git
-  revision: e21b72b2fb744b49d8f5da3202edd0f85e3f9baa
-  ref: e21b72b2fb744b49d8f5da3202edd0f85e3f9baa
-  branch: add-erp-proxy
+  revision: ebe670bddc3136c4cb6d137939800b6ec10760db
   specs:
     shop_invader (0.1.0)
       algoliasearch (~> 1.13.0)
@@ -10,8 +8,7 @@ GIT
 
 GIT
   remote: https://github.com/locomotivecms/custom_fields.git
-  revision: 36b79ea91b896abdc5c863f898b16dd1e9ae9756
-  ref: 36b79ea91b896abdc5c863f898b16dd1e9ae9756
+  revision: 27f1d621afc894002693de78f0165c0631119194
   specs:
     custom_fields (2.8.0)
       activesupport (~> 4.2.7)
@@ -22,10 +19,9 @@ GIT
 
 GIT
   remote: https://github.com/locomotivecms/engine.git
-  revision: 71f0b0c5c42b6d35751e81ca9d66ac1317b115e4
-  ref: 71f0b0c5c42b6d35751e81ca9d66ac1317b115e4
+  revision: 1d1ae38d073e2df84bbc22e1b227fce56fdf0215
   specs:
-    locomotivecms (3.3.0.rc2)
+    locomotivecms (3.3.0.rc3)
       actionmailer-with-request (~> 0.4.0)
       autoprefixer-rails (~> 6.7.2)
       bazaar (~> 0.0.2)
@@ -46,7 +42,7 @@ GIT
       jquery-ui-rails (~> 5.0.3)
       json-schema (~> 2.8.0)
       kaminari (~> 0.17.0)
-      locomotivecms_steam (~> 1.3.0.rc1)
+      locomotivecms_steam (~> 1.3.0.rc2)
       mongo_session_store-rails4 (~> 6.0.0)
       mongoid (~> 5.2.0)
       mongoid-tree (~> 2.1.0)
@@ -64,10 +60,9 @@ GIT
 
 GIT
   remote: https://github.com/locomotivecms/steam.git
-  revision: 0b2fab03029872cf3b4f73336ae8fc2d241e06af
-  ref: 0b2fab03029872cf3b4f73336ae8fc2d241e06af
+  revision: 361e7b45a7b5e26d0ab9fb7594651f33defb4605
   specs:
-    locomotivecms_steam (1.3.0.rc1)
+    locomotivecms_steam (1.3.0.rc2)
       RedCloth (~> 4.3.2)
       autoprefixer-rails (~> 6.7.2)
       bcrypt (~> 3.1.11)
@@ -143,14 +138,14 @@ GEM
     attr_extras (4.4.0)
     autoprefixer-rails (6.7.7.2)
       execjs
-    aws-sdk (2.9.23)
-      aws-sdk-resources (= 2.9.23)
-    aws-sdk-core (2.9.23)
+    aws-sdk (2.10.10)
+      aws-sdk-resources (= 2.10.10)
+    aws-sdk-core (2.10.10)
       aws-sigv4 (~> 1.0)
       jmespath (~> 1.0)
-    aws-sdk-resources (2.9.23)
-      aws-sdk-core (= 2.9.23)
-    aws-sigv4 (1.0.0)
+    aws-sdk-resources (2.10.10)
+      aws-sdk-core (= 2.10.10)
+    aws-sigv4 (1.0.1)
     axiom-types (0.1.1)
       descendants_tracker (~> 0.0.4)
       ice_nine (~> 0.11.0)
@@ -165,7 +160,7 @@ GEM
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
-    bson (4.2.1)
+    bson (4.2.2)
     builder (3.2.3)
     byebug (9.0.6)
     carrierwave (0.11.2)
@@ -221,7 +216,7 @@ GEM
       warden (~> 1.2.3)
     devise-encryptable (0.2.0)
       devise (>= 2.1.0)
-    dragonfly (1.1.2)
+    dragonfly (1.1.3)
       addressable (~> 2.3)
       multi_json (~> 1.0)
       rack (>= 1.3)
@@ -251,15 +246,15 @@ GEM
     grape-entity (0.4.5)
       activesupport
       multi_json (>= 1.3.2)
-    hashie (3.5.5)
+    hashie (3.5.6)
     highline (1.7.8)
     httparty (0.14.0)
       multi_xml (>= 0.5.2)
     httpclient (2.8.3)
-    i18n (0.8.1)
+    i18n (0.8.6)
     ice_nine (0.11.2)
-    jbuilder (2.6.4)
-      activesupport (>= 3.0.0)
+    jbuilder (2.7.0)
+      activesupport (>= 4.2.0)
       multi_json (>= 1.2)
     jmespath (1.3.1)
     jquery-rails (4.1.1)
@@ -285,7 +280,7 @@ GEM
       stringex (~> 2.6.0)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
-    mail (2.6.5)
+    mail (2.6.6)
       mime-types (>= 1.16, < 4)
     mime-types (3.1)
       mime-types-data (~> 3.2015)
@@ -319,7 +314,7 @@ GEM
     multipart-post (2.0.0)
     nokogiri (1.7.0.1)
       mini_portile2 (~> 2.1.0)
-    nokogumbo (1.4.11)
+    nokogumbo (1.4.13)
       nokogiri
     nprogress-rails (0.1.6.8)
     origin (2.3.1)
@@ -327,7 +322,7 @@ GEM
     pony (1.11)
       mail (>= 2.0)
     public_suffix (2.0.5)
-    puma (3.8.2)
+    puma (3.9.1)
     pundit (1.1.0)
       activesupport (>= 3.0.0)
     rack (1.6.8)
@@ -375,9 +370,9 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (12.0.0)
-    rb-fsevent (0.9.8)
-    rb-inotify (0.9.8)
-      ffi (>= 0.5.0)
+    rb-fsevent (0.10.2)
+    rb-inotify (0.9.10)
+      ffi (>= 0.5.0, < 2)
     rdoc (4.3.0)
     responders (2.3.0)
       railties (>= 4.2.0, < 5.1)
@@ -385,7 +380,7 @@ GEM
       crass (~> 1.0.2)
       nokogiri (>= 1.4.4)
       nokogumbo (~> 1.4.1)
-    sass (3.4.24)
+    sass (3.4.25)
     sass-rails (5.0.6)
       railties (>= 4.0.0, < 6)
       sass (~> 3.1)
@@ -463,4 +458,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.14.6
+   1.13.6

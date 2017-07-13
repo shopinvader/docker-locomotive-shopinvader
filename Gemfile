@@ -38,10 +38,10 @@ gem 'puma'
 # gem 'capistrano-rails', group: :development
 
 # Shopinvader / Locomotive gems
-gem 'custom_fields', github: 'locomotivecms/custom_fields', ref: '36b79ea91b896abdc5c863f898b16dd1e9ae9756'
-gem 'locomotivecms_steam', github: 'locomotivecms/steam', ref: '0b2fab03029872cf3b4f73336ae8fc2d241e06af', require: false
-gem 'locomotivecms', github: 'locomotivecms/engine', ref: '71f0b0c5c42b6d35751e81ca9d66ac1317b115e4'
-gem 'shop_invader', github: 'akretion/shopinvader', ref: 'e21b72b2fb744b49d8f5da3202edd0f85e3f9baa', branch: 'add-erp-proxy'
+gem 'custom_fields', github: 'locomotivecms/custom_fields'
+gem 'locomotivecms_steam', github: 'locomotivecms/steam'
+gem 'locomotivecms', github: 'locomotivecms/engine'
+gem 'shop_invader', github: 'akretion/shopinvader'
 
 
 group :development, :test do
