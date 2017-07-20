@@ -137,7 +137,3 @@ production:
   clients:
     default:
       uri: <%= ENV['MONGODB_URI'] || ENV['MONGOHQ_URL'] || ENV['MONGO_URL'] %>
-      options:
-        read:
-          mode: :primary
-        max_pool_size: 1
