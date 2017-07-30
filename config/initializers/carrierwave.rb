@@ -16,6 +16,10 @@ CarrierWave.configure do |config|
     config.aws_bucket       = ENV['S3_BUCKET']
     config.aws_acl          = 'public-read'
 
+    config.aws_attributes = {
+      cache_control: ENV['S3_CACHE_CONTROL']
+    }
+
     config.aws_credentials  = {
       access_key_id:      ENV['S3_KEY_ID'],
       secret_access_key:  ENV['S3_SECRET_KEY'],

@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/akretion/shopinvader.git
-  revision: ebe670bddc3136c4cb6d137939800b6ec10760db
+  revision: 314fa3db1fa38a71325da316a5b50b0350e6133b
   specs:
     shop_invader (0.1.0)
       algoliasearch (~> 1.13.0)
@@ -138,13 +138,13 @@ GEM
     attr_extras (4.4.0)
     autoprefixer-rails (6.7.7.2)
       execjs
-    aws-sdk (2.10.10)
-      aws-sdk-resources (= 2.10.10)
-    aws-sdk-core (2.10.10)
+    aws-sdk (2.10.19)
+      aws-sdk-resources (= 2.10.19)
+    aws-sdk-core (2.10.19)
       aws-sigv4 (~> 1.0)
       jmespath (~> 1.0)
-    aws-sdk-resources (2.10.10)
-      aws-sdk-core (= 2.10.10)
+    aws-sdk-resources (2.10.19)
+      aws-sdk-core (= 2.10.19)
     aws-sigv4 (1.0.1)
     axiom-types (0.1.1)
       descendants_tracker (~> 0.0.4)
@@ -162,15 +162,14 @@ GEM
       sass (>= 3.3.4)
     bson (4.2.2)
     builder (3.2.3)
-    byebug (9.0.6)
     carrierwave (0.11.2)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
       json (>= 1.7)
       mime-types (>= 1.16)
       mimemagic (>= 0.3.0)
-    carrierwave-aws (1.1.0)
-      aws-sdk (~> 2.0)
+    carrierwave-aws (1.2.0)
+      aws-sdk (~> 2.1)
       carrierwave (>= 0.7, < 2.0)
     carrierwave-mongoid (0.10.0)
       carrierwave (>= 0.8.0, < 0.12.0)
@@ -288,13 +287,13 @@ GEM
     mimemagic (0.3.2)
     mimetype-fu (0.1.2)
     mini_portile2 (2.1.0)
-    minitest (5.10.2)
+    minitest (5.10.3)
     moneta (1.0.0)
     monetize (1.6.0)
       money (~> 6.8)
     money (6.9.0)
       i18n (>= 0.6.4, < 0.9)
-    mongo (2.4.2)
+    mongo (2.4.3)
       bson (>= 4.2.1, < 5.0.0)
     mongo_session_store-rails4 (6.0.0)
       actionpack (>= 3.1)
@@ -322,7 +321,6 @@ GEM
     pony (1.11)
       mail (>= 2.0)
     public_suffix (2.0.5)
-    puma (3.9.1)
     pundit (1.1.0)
       activesupport (>= 3.0.0)
     rack (1.6.8)
@@ -390,6 +388,8 @@ GEM
     sdoc (0.4.2)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    sentry-raven (2.6.0)
+      faraday (>= 0.7.6, < 1.0)
     simple_form (3.4.0)
       actionpack (> 4, < 5.1)
       activemodel (> 4, < 5.1)
@@ -400,8 +400,6 @@ GEM
     slim (3.0.8)
       temple (>= 0.7.6, < 0.9)
       tilt (>= 1.3.3, < 2.1)
-    spring (2.0.2)
-      activesupport (>= 4.2)
     sprockets (3.7.1)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
@@ -413,12 +411,14 @@ GEM
     temple (0.8.0)
     thor (0.19.4)
     thread_safe (0.3.6)
-    tilt (2.0.7)
+    tilt (2.0.8)
     turbolinks (5.0.1)
       turbolinks-source (~> 5)
     turbolinks-source (5.0.3)
     tzinfo (1.2.3)
       thread_safe (~> 0.1)
+    tzinfo-data (1.2017.2)
+      tzinfo (>= 1.0.0)
     uglifier (3.1.13)
       execjs (>= 0.3.0, < 3)
     virtus (1.0.5)
@@ -428,17 +428,11 @@ GEM
       equalizer (~> 0.0, >= 0.0.9)
     warden (1.2.7)
       rack (>= 1.0)
-    web-console (2.3.0)
-      activemodel (>= 4.0)
-      binding_of_caller (>= 0.7.2)
-      railties (>= 4.0)
-      sprockets-rails (>= 2.0, < 4.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  byebug
   carrierwave-aws
   coffee-rails (~> 4.1.0)
   custom_fields!
@@ -446,16 +440,15 @@ DEPENDENCIES
   jquery-rails
   locomotivecms!
   locomotivecms_steam!
-  puma
   rails (= 4.2.8)
   rails_12factor
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
+  sentry-raven
   shop_invader!
-  spring
   turbolinks
+  tzinfo-data
   uglifier (>= 1.3.0)
-  web-console (~> 2.0)
 
 BUNDLED WITH
-   1.13.6
+   1.15.1

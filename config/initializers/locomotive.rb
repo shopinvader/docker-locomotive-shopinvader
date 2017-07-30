@@ -30,7 +30,7 @@ Locomotive.configure do |config|
   # of the request: X-Locomotive-Account-Email and X-Locomotive-Token.
   # However, to keep backward compatability with v2.x versions, you can use
   # the "token" request param instead although it is considered unsafe.
-  config.unsafe_token_authentication = true
+  config.unsafe_token_authentication = false
 
   # Uncomment this line to force Locomotive to redirect all requests in the
   # back-office to https in production.
@@ -65,6 +65,6 @@ Locomotive.configure do |config|
 
   # Indicate whether you want to allow users to register with the site. If set
   # to false the registration page will not be shown. (Default: true)
-  # config.enable_registration = true
+  config.enable_registration = ENV['LOCOMOTIVE_ENABLE_REGISTRATION']
 
 end
