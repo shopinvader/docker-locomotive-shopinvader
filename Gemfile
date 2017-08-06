@@ -34,7 +34,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Shopinvader / Locomotive gems
 gem 'custom_fields', github: 'locomotivecms/custom_fields'
-gem 'locomotivecms_steam', github: 'locomotivecms/steam'
+gem 'locomotivecms_steam', github: 'akretion/steam'
 gem 'locomotivecms', github: 'locomotivecms/engine'
 gem 'shop_invader', github: 'akretion/shopinvader'
 
