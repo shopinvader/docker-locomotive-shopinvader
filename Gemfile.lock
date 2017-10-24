@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/akretion/shopinvader.git
-  revision: 014a3f3097a84232aea5a63dad83cfa92a46fe7a
+  revision: b154cfc60ad3cf6436035c9ca40018f0ce741b4a
   specs:
     shop_invader (0.1.0)
       algoliasearch (~> 1.13.0)
