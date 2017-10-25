@@ -50,7 +50,7 @@ GIT
 
 GIT
   remote: https://github.com/locomotivecms/engine.git
-  revision: 1d1ae38d073e2df84bbc22e1b227fce56fdf0215
+  revision: 1d6e8a16bedb3624caa1800cb7eb31a469a1bd81
   specs:
     locomotivecms (3.3.0.rc3)
       actionmailer-with-request (~> 0.4.0)
