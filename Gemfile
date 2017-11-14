@@ -6,6 +6,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'net-ldap'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.8'
 # Use SCSS for stylesheets
@@ -34,7 +36,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Shopinvader / Locomotive gems
 gem 'custom_fields', github: 'locomotivecms/custom_fields'
-gem 'locomotivecms_steam', github: 'akretion/steam'
+gem 'locomotivecms_steam', github: 'akretion/steam', branch: 'ldap-and-pending-pr'
 gem 'locomotivecms', github: 'locomotivecms/engine'
 gem 'shop_invader', github: 'akretion/shopinvader'
 
