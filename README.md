@@ -2,6 +2,41 @@
 
 This is the official container for shopinvader
 
+## How to use this image
+
+Create a dockerfile with
+
+
+```
+version: '3'
+services:
+  db:
+    image: mongo:3
+    volumes:
+      - .db:/data/db
+  locomotive:
+    environment:
+      - LOCOMOTIVE_ENABLE_REGISTRATION=true
+      - PASSENGER_APP_ENV=production
+      - MONGODB_URI=mongodb://db/shopinvader
+      - SECRET_KEY_BASE=generateArealSecretKey
+      - DRAGON_FLY_SECRET=generateArealSecretKey
+    image: quay.io/akretion/shopinvader
+    ports:
+      - 8080:80
+    volumes:
+      - ./data/sites:/home/app/webapp/public/sites
+      - ./data/uploaded_assets:/home/app/webapp/public/uploaded_assets
+    links:
+      - db
+
+```
+
+Create the directory data/sites and data/uploaded_assets for the assets
+The user that own this directory must be the user 9999
+
+Run with docker-compose up and locomotive is available on http://localhost:8080
+
 
 
 # Develop / Debug
@@ -23,6 +58,9 @@ aws s3 sync s3://mybucket/sites public/sites
 aws s3 sync s3://mybucket/uploaded_assets public/uploaded_assets
 
 ```
+
+
+
 
 
 # List Environnement Variable
