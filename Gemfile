@@ -33,10 +33,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 # Shopinvader / Locomotive gems
-gem 'custom_fields', github: 'locomotivecms/custom_fields'
-gem 'locomotivecms_steam', github: 'akretion/steam'
+gem 'locomotivecms_steam', github: 'locomotivecms/steam', require: false, ref: 'e23477ecbd0b752498bb2258ff14d41511016251'
 gem 'locomotivecms', github: 'locomotivecms/engine'
-gem 'shop_invader', github: 'akretion/shopinvader'
+gem 'shop_invader', github: 'akretion/locomotive_shopinvader', branch: 'refactor-odoo-10'
+
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
