@@ -4,8 +4,7 @@ This is the official container for shopinvader
 
 ## How to use this image
 
-Create a dockerfile with
-
+In the directory of your choice (not a clone of this repo), create a ```docker-compose.yml``` file with the following content:
 
 ```
 version: '3'
@@ -35,7 +34,7 @@ services:
 Create the directory data/sites and data/uploaded_assets for the assets
 The user that own this directory must be the user 9999
 
-Run with docker-compose up and locomotive is available on http://localhost:8080
+Run it with ```docker-compose up```. Locomotive is now available on http://localhost:8080
 
 
 
@@ -63,7 +62,7 @@ aws s3 sync s3://mybucket/uploaded_assets public/uploaded_assets
 
 
 
-# List Environnement Variable
+# Available Environnement Variables for settings:
 
 #TODO find a simple way to auto document them
 
