@@ -36,6 +36,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'locomotivecms_steam', github: 'locomotivecms/steam', require: false, ref: 'e23477ecbd0b752498bb2258ff14d41511016251'
 gem 'locomotivecms', github: 'locomotivecms/engine'
 gem 'shop_invader', github: 'akretion/locomotive_shopinvader', branch: 'refactor-odoo-10'
+gem 'devise', github: 'plataformatec/devise', :branch => '3-stable'
 
 
 group :development do
