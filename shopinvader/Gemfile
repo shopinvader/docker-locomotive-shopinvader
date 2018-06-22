@@ -1,0 +1,40 @@
+source 'https://rubygems.org'
+
+# Use https for github source
+git_source(:github) do |repo_name|
+  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
+  "https://github.com/#{repo_name}.git"
+end
+
+# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
+gem 'turbolinks'
+
+# needed for this rails application in order to build the js and css of locomotive engine (backend of the cms)
+gem 'coffee-rails'
+gem 'sass-rails'
+
+# Use puma for multi worker / multi process https://github.com/puma/puma
+gem 'puma', '~> 3.11.4'
+gem 'puma_worker_killer'
+
+# Shopinvader / Locomotive gems use master branch for now
+gem 'locomotivecms_steam', github: 'locomotivecms/steam'
+gem 'locomotivecms', github: 'locomotivecms/engine'
+gem 'shop_invader', github: 'akretion/locomotive_shopinvader', branch: 'refactor-odoo-10'
+
+
+group :development do
+  # Access an IRB console on exception pages or by using <%= console %> in views
+  gem 'web-console', '~> 2.0'
+  gem 'byebug'
+
+  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'spring'
+end
+
+group :production do
+  gem 'tzinfo-data'
+  gem 'carrierwave-aws'
+  gem 'rails_12factor'
+  gem "sentry-raven"
+end

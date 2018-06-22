@@ -1,3 +1,6 @@
+# This is an example of docker compose file that you can use
+# for testing shopinvader, enjoy it
+# Note do not forget to put a front (nginx, ha-proxy...) for ssl termination
 services:
   db:
     image: mongo:3
@@ -6,9 +9,15 @@ services:
   locomotive:
     ports:
       - 3000:3000
-    build: .
-    volumes:
-      - ./log:/workspace/log
+    # In production never never never use latest !
+    # use a specific tag image in order to be sure
+    # of what you install
+    image: quay.io/akretion/shopinvader:latest
     links:
-    - db
-version: '2'
+      - db
+    volumes:
+      - ./tmp:/usr/src/app/tmp
+      - ./log:/usr/src/app/log
+      - ./public/sites:/usr/src/app/public/sites
+      - ./public/uploaded_assets:/usr/src/app/public/uploaded_assets
+version: '3'
