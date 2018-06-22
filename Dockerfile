@@ -9,6 +9,7 @@ COPY bin /usr/src/bin
 
 RUN DEBIAN_FRONTEND=noninteractive && \
     apt-get update && \
+    apt-get upgrade -y && \
     apt-get install -y imagemagick nodejs && \
     /usr/src/install/gosu.sh \
     apt-get upgrade -y -o Dpkg::Options::="--force-confold" && \
