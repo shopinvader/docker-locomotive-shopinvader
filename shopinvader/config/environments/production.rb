@@ -69,7 +69,7 @@ Rails.application.configure do
     :user_name            => ENV["SMTP_USERNAME"],
     :password             => ENV["SMTP_PASSWORD"],
     :authentication       => "plain",
-    :enable_starttls_auto => true
+    :enable_starttls_auto => (ENV['SMTP_ENABLE_STARTTLS_AUTO'] || "true") == "true"
   }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
