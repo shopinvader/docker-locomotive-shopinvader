@@ -1,5 +1,5 @@
 .db
-public/assets
-public/sites
-public/uploaded_assets
-dev-gem
+shopinvader/public/assets
+shopinvader/public/sites
+shopinvader/public/uploaded_assets
+shopinvader/dev-gem

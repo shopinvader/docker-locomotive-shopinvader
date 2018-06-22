@@ -11,7 +11,7 @@ RUN DEBIAN_FRONTEND=noninteractive && \
     apt-get upgrade -y -o Dpkg::Options::="--force-confold" && \
     apt-get clean
 
-ADD . ./
+ADD shopinvader ./
 RUN bundle install --without development && mkdir -p tmp log && chown 9999:9999 tmp log
 RUN bundle exec rake assets:precompile
 RUN rm -rf log/* tmp/*
