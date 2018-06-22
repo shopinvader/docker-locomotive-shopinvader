@@ -4,38 +4,10 @@ This is the official container for shopinvader
 
 ## How to use this image
 
-Create a dockerfile with
+Copy the file docker-compose.yml of this directory
+create the directy tmp, log, public/sites, public/uploaded_assets
 
-
-```
-version: '3'
-services:
-  db:
-    image: mongo:3
-    volumes:
-      - .db:/data/db
-  locomotive:
-    environment:
-      - LOCOMOTIVE_ENABLE_REGISTRATION=true
-      - PASSENGER_APP_ENV=production
-      - MONGODB_URI=mongodb://db/shopinvader
-      - SECRET_KEY_BASE=generateArealSecretKey
-      - DRAGON_FLY_SECRET=generateArealSecretKey
-    image: quay.io/akretion/shopinvader
-    ports:
-      - 8080:80
-    volumes:
-      - ./data/sites:/home/app/webapp/public/sites
-      - ./data/uploaded_assets:/home/app/webapp/public/uploaded_assets
-    links:
-      - db
-
-```
-
-Create the directory data/sites and data/uploaded_assets for the assets
-The user that own this directory must be the user 9999
-
-Run with docker-compose up and locomotive is available on http://localhost:8080
+Run it with ```docker-compose up```. Locomotive is now available on http://localhost:300
 
 
 
@@ -59,21 +31,33 @@ aws s3 sync s3://mybucket/uploaded_assets public/uploaded_assets
 
 ```
 
+# TODO
+- add an environment example file with documentation
+- add an environment dev file
+- improve log managment (ready for kibana)
 
+# Available Environnement Variables for settings:
 
-
-
-# List Environnement Variable
-
-#TODO find a simple way to auto document them
-
-
-PASSENGER_APP_ENV
+## RAILS configuration
+RAILS_ENV
 MONGODB_URI
-
 SECRET_KEY_BASE
 
-STORE_ASSET_IN_S3
+DEVISE_PEPPER (for more information : https://stackoverflow.com/questions/45988723/what-password-hashing-algorithm-does-devise-use and https://github.com/plataformatec/devise/blob/88724e10adaf9ffd1d8dbfbaadda2b9d40de756a/lib/devise/encryptor.rb)
+
+DRAGON_FLY_SECRET
+LOCOMOTIVE_ENABLE_REGISTRATION  (true or false)
+
+
+## PUMA configuration
+PUMA_MIN_THREAD
+PUMA_MAX_THREAD
+PUMA_WORKER
+PUMA_AUTH_TOKEN
+
+
+## Configuration for storing the asset in amazon S3
+STORE_ASSET_IN_S3  (true or false)
 S3_BUCKET
 S3_KEY_ID
 S3_SECRET_KEY
@@ -81,16 +65,13 @@ S3_BUCKET_REGION
 S3_ASSET_HOST_URL
 S3_CACHE_CONTROL
 
+## SMTP configuration
+SMTP_ENABLE_STARTTLS_AUTO (default True)
 SMTP_ADDRESS
 SMTP_PORT
 SMTP_SENDER
 SMTP_USERNAME
 SMTP_PASSWORD
 
-DEVISE_PEPPER
-
-DRAGON_FLY_SECRET
-
-LOCOMOTIVE_ENABLE_REGISTRATION  (true or false)
-
+## Sentry configuration
 SENTRY_DSN
