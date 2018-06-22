@@ -64,15 +64,25 @@ aws s3 sync s3://mybucket/uploaded_assets public/uploaded_assets
 
 # Available Environnement Variables for settings:
 
-#TODO find a simple way to auto document them
 
-
-PASSENGER_APP_ENV
+# RAILS configuration
+RAILS_ENV
 MONGODB_URI
-
 SECRET_KEY_BASE
+DEVISE_PEPPER
+DRAGON_FLY_SECRET
+LOCOMOTIVE_ENABLE_REGISTRATION  (true or false)
 
-STORE_ASSET_IN_S3
+
+# PUMA configuration
+PUMA_MIN_THREAD
+PUMA_MAX_THREAD
+PUMA_WORKER
+PUMA_AUTH_TOKEN
+
+
+## Configuration for storing the asset in amazon S3
+STORE_ASSET_IN_S3  (true or false)
 S3_BUCKET
 S3_KEY_ID
 S3_SECRET_KEY
@@ -80,16 +90,12 @@ S3_BUCKET_REGION
 S3_ASSET_HOST_URL
 S3_CACHE_CONTROL
 
+## SMTP configuration
 SMTP_ADDRESS
 SMTP_PORT
 SMTP_SENDER
 SMTP_USERNAME
 SMTP_PASSWORD
 
-DEVISE_PEPPER
-
-DRAGON_FLY_SECRET
-
-LOCOMOTIVE_ENABLE_REGISTRATION  (true or false)
-
+## Sentry configuration
 SENTRY_DSN

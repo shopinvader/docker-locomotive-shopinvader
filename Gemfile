@@ -6,37 +6,21 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.8'
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
-# Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
-# Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.1.0'
-# See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
-
-# Use jquery as the JavaScript library
-gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.0'
-# bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0', group: :doc
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+# needed for this rails application in order to build the js and css of locomotive engine (backend of the cms)
+gem 'coffee-rails'
+gem 'sass-rails'
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+# Use puma for multi worker / multi process https://github.com/puma/puma
+gem 'puma', '~> 3.11.4'
+gem 'puma_worker_killer'
 
-# Shopinvader / Locomotive gems
-gem 'locomotivecms_steam', github: 'locomotivecms/steam', require: false, ref: 'e23477ecbd0b752498bb2258ff14d41511016251'
+# Shopinvader / Locomotive gems use master branch for now
+gem 'locomotivecms_steam', github: 'locomotivecms/steam'
 gem 'locomotivecms', github: 'locomotivecms/engine'
 gem 'shop_invader', github: 'akretion/locomotive_shopinvader', branch: 'refactor-odoo-10'
-gem 'devise', github: 'plataformatec/devise', :branch => '3-stable'
 
 
 group :development do
