@@ -20,6 +20,7 @@ dev.docker-compose.yml
 public/assets/*
 public/sites/*
 public/uploaded_assets/*
+environment
 .
 
 # TODO Comment out these rules if you are OK with secrets being uploaded to the repo

@@ -1,5 +1,6 @@
 .db
-shopinvader/public/assets
-shopinvader/public/sites
-shopinvader/public/uploaded_assets
-shopinvader/dev-gem
+tmp
+public
+log
+environment
+**/dev-gem
