@@ -1,4 +1,4 @@
-FROM ruby:2.5.1-stretch
+FROM ruby:2.5.1-slim-stretch
 
 RUN bundle config --global frozen 1
 
@@ -7,18 +7,18 @@ WORKDIR /usr/src/app
 COPY install /usr/src/install
 COPY bin /usr/src/bin
 
-RUN DEBIAN_FRONTEND=noninteractive && \
-    apt-get update && \
-    apt-get upgrade -y && \
-    apt-get install -y imagemagick nodejs && \
-    /usr/src/install/gosu.sh \
-    apt-get upgrade -y -o Dpkg::Options::="--force-confold" && \
-    apt-get clean
+ENV BUILD_PACKAGE curl gpg git build-essential
 
 COPY shopinvader ./
-RUN bundle install --without development && mkdir -p tmp log && chown 9999:9999 tmp log
-RUN bundle exec rake assets:precompile
-RUN rm -rf log/* tmp/*
+
+RUN DEBIAN_FRONTEND=noninteractive \
+    && apt-get update \
+    && apt-get install -y imagemagick nodejs $BUILD_PACKAGE \
+    && /usr/src/install/gosu.sh \
+    && /usr/src/install/shopinvader.sh \
+    && apt-get upgrade -y -o Dpkg::Options::="--force-confold" \
+    && apt-get purge -y $BUILD_PACKAGE \
+    && apt-get clean
 
 ENTRYPOINT ["/usr/src/bin/docker-entrypoint.sh"]
 
