@@ -2,10 +2,9 @@ CarrierWave.configure do |config|
 
   config.cache_dir = File.join(Rails.root, 'tmp', 'uploads')
 
-  if ENV['STORE_ASSET_IN_S3']
+  if ENV['STORE_ASSET_IN_S3'] == "true"
     # WARNING: add the "carrierwave-aws" gem in your Rails app Gemfile.
     # More information here: https://github.com/sorentwo/carrierwave-aws
-
     config.storage          = :aws
     config.aws_bucket       = ENV['S3_BUCKET']
     config.aws_acl          = 'public-read'

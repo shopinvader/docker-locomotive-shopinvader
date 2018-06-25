@@ -18,9 +18,11 @@ gem 'puma', '~> 3.11.4'
 gem 'puma_worker_killer'
 
 # Shopinvader / Locomotive gems use master branch for now
-gem 'locomotivecms_steam', github: 'locomotivecms/steam'
 gem 'locomotivecms', github: 'locomotivecms/engine'
+gem 'locomotivecms_steam', github: 'akretion/steam', branch: 'better-lang-support'
 gem 'shop_invader', github: 'akretion/locomotive_shopinvader', branch: 'refactor-odoo-10'
+#gem 'shop_invader', path: 'dev-gem/shopinvader'
+#gem 'locomotivecms_steam', path: 'dev-gem/steam'
 
 
 group :development do
