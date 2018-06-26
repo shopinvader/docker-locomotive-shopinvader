@@ -23,6 +23,14 @@ public/uploaded_assets/*
 environment
 .
 
+/shopinvader/vendor/bundle
+/shopinvader/public/assets
+/shopinvader/public/uploaded_assets
+/shopinvader/public/sites
+/shopinvader/log
+/shopinvader/tmp
+/shopinvader/.bundle
+
 # TODO Comment out these rules if you are OK with secrets being uploaded to the repo
 config/initializers/secret_token.rb
 
