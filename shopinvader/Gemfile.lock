@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/akretion/locomotive_shopinvader.git
-  revision: bb5ae0b118e2752be38750af1cf1692349c7c7f8
+  revision: 5c3a20f9781fa0f4f858f686ec7876d3e558194b
   branch: refactor-odoo-10
   specs:
     shop_invader (0.1.0)
@@ -9,8 +9,8 @@ GIT
 
 GIT
   remote: https://github.com/akretion/steam.git
-  revision: 0da298978835a5153d8486cb455d0ccade7c5e63
-  branch: better-lang-support
+  revision: 322450c17529b0afe619710c2bd8de0476945984
+  branch: v3.4-pending-pr
   specs:
     locomotivecms_steam (1.4.0.rc2)
       RedCloth (~> 4.3.2)
