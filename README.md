@@ -7,7 +7,7 @@ This is the official container for shopinvader
 Copy the file docker-compose.yml of this directory
 create the directy tmp, log, public/sites, public/uploaded_assets
 
-Run it with ```docker-compose up```. Locomotive is now available on http://localhost:300
+Run it with ```docker-compose up```. Locomotive is now available on http://localhost:3000
 
 
 
@@ -39,6 +39,7 @@ aws s3 sync s3://mybucket/uploaded_assets public/uploaded_assets
 # Available Environnement Variables for settings:
 
 ## RAILS configuration
+```
 RAILS_ENV
 MONGODB_URI
 SECRET_KEY_BASE
@@ -47,16 +48,22 @@ DEVISE_PEPPER (for more information : https://stackoverflow.com/questions/459887
 
 DRAGON_FLY_SECRET
 LOCOMOTIVE_ENABLE_REGISTRATION  (true or false)
+```
 
 
 ## PUMA configuration
+
+```
 PUMA_MIN_THREAD
 PUMA_MAX_THREAD
 PUMA_WORKER
 PUMA_AUTH_TOKEN
+```
 
 
 ## Configuration for storing the asset in amazon S3
+
+```
 STORE_ASSET_IN_S3  (true or false)
 S3_BUCKET
 S3_KEY_ID
@@ -64,14 +71,21 @@ S3_SECRET_KEY
 S3_BUCKET_REGION
 S3_ASSET_HOST_URL
 S3_CACHE_CONTROL
+```
 
 ## SMTP configuration
+
+```
 SMTP_ENABLE_STARTTLS_AUTO (default True)
 SMTP_ADDRESS
 SMTP_PORT
 SMTP_SENDER
 SMTP_USERNAME
 SMTP_PASSWORD
+```
 
 ## Sentry configuration
+
+```
 SENTRY_DSN
+```

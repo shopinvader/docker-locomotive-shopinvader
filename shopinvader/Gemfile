@@ -15,7 +15,6 @@ gem 'sass-rails'
 
 # Use puma for multi worker / multi process https://github.com/puma/puma
 gem 'puma', '~> 3.11.4'
-gem 'puma_worker_killer'
 
 # Shopinvader / Locomotive gems use master branch for now
 gem 'locomotivecms', github: 'locomotivecms/engine'

@@ -1,6 +1,4 @@
 .db
-tmp
-public
-log
+data
 environment
 **/dev-gem

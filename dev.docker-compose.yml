@@ -1,0 +1,29 @@
+# This is the dev docker compose that I use with docky for dev purpose
+# Do not forget to create the mounted directory before
+networks:
+  default:
+    external:
+      name: vd
+services:
+  db:
+    image: mongo:3
+    volumes:
+      - ./data/db:/data/db
+      - ./data/backup:/backup
+  locomotive:
+    env_file: env_demo
+    environment:
+      - VIRTUAL_HOST=shopinvader-server.vd
+      - VIRTUAL_PORT=3000
+    image: quay.io/akretion/docky-ruby:latest
+    links:
+      - db
+    volumes:
+       - ./shopinvader:/workspace
+       - ../gems:/workspace/dev-gem
+       - $HOME/.docky/shared/bundle:/usr/local/bundle
+       - ./data/tmp:/workspace/tmp
+       - ./data/log:/workspace/log
+       - ./data/public/sites:/workspace/public/sites
+       - ./data/public/uploaded_assets:/workspace/public/uploaded_assets
+version: '3'
