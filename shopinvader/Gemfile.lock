@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/akretion/locomotive_shopinvader.git
-  revision: 7df4b4843606dfa9842de90d7d0ce95f72520715
+  revision: 363343ff310d910dfa6c5dd5ac416ebd56395ede
   branch: refactor-odoo-10
   specs:
     shop_invader (0.1.0)
