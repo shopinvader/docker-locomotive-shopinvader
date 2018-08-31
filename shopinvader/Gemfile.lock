@@ -9,7 +9,7 @@ GIT
 
 GIT
   remote: https://github.com/akretion/steam.git
-  revision: 322450c17529b0afe619710c2bd8de0476945984
+  revision: a4d95ab21a10402a658b5c3c9d3178c4aab9d5d7
   branch: v3.4-pending-pr
   specs:
     locomotivecms_steam (1.4.0.rc2)
