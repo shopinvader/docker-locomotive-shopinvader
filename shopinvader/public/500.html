@@ -1,66 +1,102 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>We're sorry, but something went wrong (500)</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <style>
-  body {
-    background-color: #EFEFEF;
-    color: #2E2F30;
-    text-align: center;
-    font-family: arial, sans-serif;
-    margin: 0;
-  }
+  <head>
+    <meta charset="utf-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="" >
+    <meta name="viewport" content="width=device-width,max-width:2048px; initial-scale=1">
 
-  div.dialog {
-    width: 95%;
-    max-width: 33em;
-    margin: 4em auto 0;
-  }
+    <title>Erreur 500 - Une erreur technique est survenue</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Raleway', sans-serif;
+      }
+      .text-lg {
+        font-size: 18px;
+      }
+      header {
+        background-color: #232F3E;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+      footer .container{
+        background-color: #555555:
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+      main {
+        margin-top: 40px;
+        margin-bottom: 40px;
+      }
+      .color-facebook {
+        color: #3b5998;
+      }
+      .color-twitter {
+        color:#55acee;
+      }
+      .color-pinterest {
+        color:#cb2027;
+      }
+      .color-youtube {
+        color:#bb0000;
+      }
+      .social-block {
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+      .category-block {
+        font-style: none;
+      }
+      .category-block li {
+        display: inline-block;
+        padding-left: 10px;
 
-  div.dialog > div {
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #BBB;
-    border-top: #B00100 solid 4px;
-    border-top-left-radius: 9px;
-    border-top-right-radius: 9px;
-    background-color: white;
-    padding: 7px 12% 0;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
-
-  h1 {
-    font-size: 100%;
-    color: #730E15;
-    line-height: 1.5em;
-  }
-
-  div.dialog > p {
-    margin: 0 0 1em;
-    padding: 1em;
-    background-color: #F7F7F7;
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #999;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    border-top-color: #DADADA;
-    color: #666;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
-  </style>
-</head>
-
-<body>
-  <!-- This file lives in public/500.html -->
-  <div class="dialog">
-    <div>
-      <h1>We're sorry, but something went wrong.</h1>
-    </div>
-    <p>If you are the application owner check the logs for more information.</p>
-  </div>
-</body>
+      }
+      .category-block li:not(:last-child):after {
+        content: " | ";
+        padding-left: 10px;
+        font-size:10px;
+        line-height: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-4 col-lg-3 text-center ">
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 text-center">
+          <h1>Le site à rencontré une erreur.</h1>
+          <div class="text-lg">
+            <p>Nos techniciens mettent tout en oeuvre pour que le site soit de nouveau accessible au plus vite.<br>
+              Nous vous invitons à réessayer ultérieurement.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 text-center social-block">
+            <p> En attendant que tous revienne à la normale, vous pouvez revenir sur la page principale du site. </p>
+            <div class="btn-group">
+                <a href="/" class="btn btn-white btn-default">
+                    <i class="fa fa-angle-double-right" aria-hidden="true"></i> Retour
+                </a>
+            </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
