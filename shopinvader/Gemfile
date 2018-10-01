@@ -17,12 +17,13 @@ gem 'sass-rails'
 gem 'puma', '~> 3.11.4'
 
 # Shopinvader / Locomotive gems use master branch for now
+gem 'custom_fields', github: 'locomotivecms/custom_fields'
+gem 'locomotivecms_common', github: 'locomotivecms/common'
+gem 'locomotivecms_steam', github: 'locomotivecms/steam'
 gem 'locomotivecms', github: 'locomotivecms/engine'
-gem 'locomotivecms_steam', github: 'akretion/steam', branch: 'v3.4-pending-pr'
-gem 'shop_invader', github: 'akretion/locomotive_shopinvader', branch: 'refactor-odoo-10'
-#gem 'shop_invader', path: 'dev-gem/shopinvader'
-#gem 'locomotivecms_steam', path: 'dev-gem/steam'
-
+gem 'shop_invader', github: 'akretion/locomotive_shopinvader', branch: 'section'
+gem 'mongo_session_store'
+gem 'jbuilder', '~> 2.5'
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
