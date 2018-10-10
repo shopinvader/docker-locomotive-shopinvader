@@ -17,11 +17,9 @@ gem 'sass-rails'
 gem 'puma', '~> 3.11.4'
 
 # Shopinvader / Locomotive gems use master branch for now
-gem 'locomotivecms', github: 'locomotivecms/engine'
-gem 'locomotivecms_steam', github: 'akretion/steam', branch: 'v3.4-pending-pr'
-gem 'shop_invader', github: 'akretion/locomotive_shopinvader', branch: 'refactor-odoo-10'
-#gem 'shop_invader', path: 'dev-gem/shopinvader'
-#gem 'locomotivecms_steam', path: 'dev-gem/steam'
+gem 'locomotivecms', github: 'locomotivecms/engine', branch: 'master', ref: 'a6302d2'
+gem 'locomotivecms_steam', github: 'akretion/steam', branch: 'v1.4.x.shopinvader'
+gem 'shop_invader', github: 'akretion/locomotive_shopinvader', branch: 'v3.4.x'
 
 
 group :development do

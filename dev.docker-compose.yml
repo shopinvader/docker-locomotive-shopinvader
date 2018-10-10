@@ -3,7 +3,7 @@
 networks:
   default:
     external:
-      name: vd
+      name: dy
 services:
   db:
     image: mongo:3
@@ -11,17 +11,20 @@ services:
       - ./data/db:/data/db
       - ./data/backup:/backup
   locomotive:
-    env_file: env_demo
     environment:
-      - VIRTUAL_HOST=shopinvader-server.vd
+      - VIRTUAL_HOST=shopinvader-server.dy
       - VIRTUAL_PORT=3000
+      - RAILS_ENV=development
+      - STORE_ASSET_IN_S3=false
+      - DRAGON_FLY_SECRET=thisISaDEMOkeyNOTsecret
+      - LOCOMOTIVE_ENABLE_REGISTRATION=true
     image: quay.io/akretion/docky-ruby:latest
     links:
       - db
     volumes:
        - ./shopinvader:/workspace
        - ../gems:/workspace/dev-gem
-       - $HOME/.docky/shared/bundle:/usr/local/bundle
+       - ./bundle:/usr/local/bundle
        - ./data/tmp:/workspace/tmp
        - ./data/log:/workspace/log
        - ./data/public/sites:/workspace/public/sites
