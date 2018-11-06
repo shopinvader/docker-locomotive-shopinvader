@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/akretion/locomotive_shopinvader.git
-  revision: 941e6913e196812b049ef457b42c053adf116b7e
+  revision: c49ca914070eb6d9c456625ef70097995b802da4
   branch: v3.4.x
   specs:
     shop_invader (0.1.0)
@@ -41,11 +41,11 @@ GIT
 
 GIT
   remote: https://github.com/locomotivecms/engine.git
-  revision: a6302d231603dc4c7766528b8d28e3c8eee507aa
-  ref: a6302d2
+  revision: 9ed6083539b51ff40c4868a39f28bbb1a3c4911c
+  ref: 9ed6083
   branch: master
   specs:
-    locomotivecms (3.4.0.rc1)
+    locomotivecms (3.4.0)
       actionmailer-with-request (~> 0.5.0)
       autoprefixer-rails (~> 8.0.0)
       bazaar (~> 0.0.2)
@@ -53,13 +53,13 @@ GIT
       bootstrap-sass (~> 3.3.7)
       carrierwave-mongoid (~> 1.0.0)
       codemirror-rails (~> 5.16.0)
-      custom_fields (~> 2.9.0.rc2)
+      custom_fields (~> 2.9.0)
       devise (~> 4.4.1)
       devise-encryptable (~> 0.2.0)
       dragonfly (~> 1.1.4)
       flash_cookie_session (~> 1.1.1)
       font-awesome-sass (~> 5.0.9)
-      grape (~> 1.0.2)
+      grape (~> 1.1.0)
       grape-entity (= 0.7.1)
       highline (~> 1.7.10)
       jquery-rails (~> 4.3.1)
@@ -67,8 +67,7 @@ GIT
       json-schema (~> 2.8.0)
       kaminari-actionview (~> 1.1.1)
       kaminari-mongoid (~> 1.0.1)
-      locomotivecms_steam (~> 1.4.0.rc1)
-      mongo_session_store (~> 3.1.0)
+      locomotivecms_steam (~> 1.4.0)
       mongoid (~> 6.4.0)
       mongoid-tree (~> 2.1.0)
       multi_json (~> 1.13.1)
@@ -239,7 +238,7 @@ GEM
       sassc (>= 1.11)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
-    grape (1.0.3)
+    grape (1.1.0)
       activesupport
       builder
       mustermann-grape (~> 1.0.0)
@@ -264,7 +263,7 @@ GEM
     jquery-ui-rails (6.0.1)
       railties (>= 3.2.16)
     json (2.1.0)
-    json-schema (2.8.0)
+    json-schema (2.8.1)
       addressable (>= 2.4)
     kaminari (1.1.1)
       activesupport (>= 4.1.0)
@@ -306,7 +305,7 @@ GEM
     moneta (1.0.0)
     monetize (1.7.0)
       money (~> 6.9)
-    money (6.13.0)
+    money (6.13.1)
       i18n (>= 0.6.4, <= 2)
     mongo (2.6.2)
       bson (>= 4.3.0, < 5.0.0)
@@ -368,7 +367,7 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.0.4)
       loofah (~> 2.2, >= 2.2.2)
-    rails-i18n (5.1.1)
+    rails-i18n (5.1.2)
       i18n (>= 0.7, < 2)
       railties (>= 5.0, < 6)
     rails_12factor (0.0.3)
@@ -463,6 +462,7 @@ DEPENDENCIES
   coffee-rails
   locomotivecms!
   locomotivecms_steam!
+  mongo_session_store (~> 3.1.0)
   puma (~> 3.11.4)
   rails_12factor
   sass-rails
@@ -474,4 +474,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.16.2
+   1.16.5
