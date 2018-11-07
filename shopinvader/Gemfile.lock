@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/akretion/locomotive_shopinvader.git
-  revision: ad9f4ac66b0ef0c8730abb6104b8ec9ca7410354
-  branch: section
+  revision: 8a1bb2730e8b73aee4685dce8f24262b8d197797
+  branch: v4.0.x
   specs:
     shop_invader (0.1.0)
       algoliasearch (~> 1.13.0)
@@ -30,14 +30,15 @@ GIT
 
 GIT
   remote: https://github.com/locomotivecms/engine.git
-  revision: 0f3dfac2aa2d01b7033ba73266d5dcbf7732cae0
+  revision: f368c67a54109272328d3be28c03ca06c9439e65
   specs:
-    locomotivecms (4.0.0.beta1)
+    locomotivecms (4.0.0.alpha1)
       actionmailer-with-request (~> 0.5.0)
       autoprefixer-rails (~> 8.0.0)
       bazaar (~> 0.0.2)
       bootstrap-kaminari-views (~> 0.0.5)
       bootstrap-sass (~> 3.3.7)
+      carrierwave-imageoptim (= 0.1.5)
       carrierwave-mongoid (~> 1.0.0)
       codemirror-rails (~> 5.16.0)
       devise (~> 4.4.1)
@@ -48,6 +49,8 @@ GIT
       grape (~> 1.1.0)
       grape-entity (= 0.7.1)
       highline (~> 1.7.10)
+      image_optim (= 0.26.3)
+      image_optim_pack (= 0.5.1)
       jbuilder (~> 2.7)
       jquery-rails (~> 4.3.1)
       jquery-ui-rails (~> 6.0.1)
@@ -70,7 +73,7 @@ GIT
 
 GIT
   remote: https://github.com/locomotivecms/steam.git
-  revision: 8360dbf545beb7e900a219e9c622469423be3f56
+  revision: 358d90646fb29143fd599e64c49ff34f4ae8f3db
   specs:
     locomotivecms_steam (1.5.0.beta1)
       RedCloth (~> 4.3.2)
@@ -156,16 +159,16 @@ GEM
     autoprefixer-rails (8.0.0)
       execjs
     aws-eventstream (1.0.1)
-    aws-partitions (1.105.0)
-    aws-sdk-core (3.30.0)
+    aws-partitions (1.108.0)
+    aws-sdk-core (3.36.0)
       aws-eventstream (~> 1.0)
       aws-partitions (~> 1.0)
       aws-sigv4 (~> 1.0)
       jmespath (~> 1.0)
-    aws-sdk-kms (1.9.0)
+    aws-sdk-kms (1.11.0)
       aws-sdk-core (~> 3, >= 3.26.0)
       aws-sigv4 (~> 1.0)
-    aws-sdk-s3 (1.21.0)
+    aws-sdk-s3 (1.23.1)
       aws-sdk-core (~> 3, >= 3.26.0)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.0)
@@ -194,6 +197,9 @@ GEM
     carrierwave-aws (1.3.0)
       aws-sdk-s3 (~> 1.0)
       carrierwave (>= 0.7, < 2.0)
+    carrierwave-imageoptim (0.1.5)
+      carrierwave (>= 0.10, < 1.3)
+      image_optim (~> 0.22)
     carrierwave-mongoid (1.0.0)
       carrierwave (>= 0.8, < 1.3)
       mongoid (>= 3.0, < 7.0)
@@ -224,7 +230,7 @@ GEM
       sass (>= 3.3.0, < 3.5)
     compass-import-once (1.0.5)
       sass (>= 3.2, < 3.5)
-    concurrent-ruby (1.0.5)
+    concurrent-ruby (1.1.3)
     crass (1.0.4)
     debug_inspector (0.0.3)
     descendants_tracker (0.0.4)
@@ -245,6 +251,7 @@ GEM
     equalizer (0.0.11)
     erubi (1.7.1)
     execjs (2.7.0)
+    exifr (1.3.4)
     faraday (0.14.0)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.25)
@@ -252,6 +259,7 @@ GEM
       rails (>= 3.0)
     font-awesome-sass (5.2.0)
       sassc (>= 1.11)
+    fspath (3.1.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     grape (1.1.0)
@@ -271,7 +279,18 @@ GEM
     i18n (1.1.1)
       concurrent-ruby (~> 1.0)
     ice_nine (0.11.2)
-    jbuilder (2.7.0)
+    image_optim (0.26.3)
+      exifr (~> 1.2, >= 1.2.2)
+      fspath (~> 3.0)
+      image_size (>= 1.5, < 3)
+      in_threads (~> 1.3)
+      progress (~> 3.0, >= 3.0.1)
+    image_optim_pack (0.5.1)
+      fspath (>= 2.1, < 4)
+      image_optim (~> 0.19)
+    image_size (2.0.0)
+    in_threads (1.5.0)
+    jbuilder (2.8.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
     jmespath (1.4.0)
@@ -303,14 +322,14 @@ GEM
     locomotivecms-liquid (4.0.0)
     locomotivecms-solid (4.0.1)
       locomotivecms-liquid (~> 4.0.0)
-    loofah (2.2.2)
+    loofah (2.2.3)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
       mini_mime (>= 0.1.1)
     marcel (0.3.3)
       mimemagic (~> 0.3.2)
-    method_source (0.9.0)
+    method_source (0.9.1)
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2018.0812)
@@ -322,7 +341,7 @@ GEM
     moneta (1.0.0)
     monetize (1.7.0)
       money (~> 6.9)
-    money (6.13.0)
+    money (6.13.1)
       i18n (>= 0.6.4, <= 2)
     mongo (2.6.2)
       bson (>= 4.3.0, < 5.0.0)
@@ -353,11 +372,12 @@ GEM
     orm_adapter (0.5.0)
     pony (1.12)
       mail (>= 2.0)
+    progress (3.5.0)
     public_suffix (3.0.3)
     puma (3.11.4)
     pundit (1.1.0)
       activesupport (>= 3.0.0)
-    rack (2.0.5)
+    rack (2.0.6)
     rack-accept (0.4.5)
       rack (>= 0.4)
     rack-cache (1.7.2)
@@ -385,7 +405,7 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.0.4)
       loofah (~> 2.2, >= 2.2.2)
-    rails-i18n (5.1.1)
+    rails-i18n (5.1.2)
       i18n (>= 0.7, < 2)
       railties (>= 5.0, < 6)
     rails_12factor (0.0.3)
@@ -441,7 +461,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    stringex (2.8.4)
+    stringex (2.8.5)
     temple (0.8.0)
     thor (0.20.0)
     thread_safe (0.3.6)
@@ -451,7 +471,7 @@ GEM
     turbolinks-source (5.2.0)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
-    tzinfo-data (1.2018.5)
+    tzinfo-data (1.2018.7)
       tzinfo (>= 1.0.0)
     uglifier (4.1.19)
       execjs (>= 0.3.0, < 3)
@@ -484,7 +504,7 @@ DEPENDENCIES
   locomotivecms!
   locomotivecms_common!
   locomotivecms_steam!
-  mongo_session_store
+  mongo_session_store (~> 3.1.0)
   puma (~> 3.11.4)
   rails_12factor
   sass-rails
