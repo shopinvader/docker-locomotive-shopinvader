@@ -28,9 +28,8 @@ CMD gosu loco bundle exec puma -C config/puma.rb
 EXPOSE 3000
 EXPOSE 9293
 
-VOLUME [ \
+VOLUME \
     "/usr/src/app/tmp" \
     "/usr/src/app/log" \
     "/usr/src/app/public/sites" \
-    "/usr/src/app/public/uploaded_assets" \
-]
+    "/usr/src/app/public/uploaded_assets"
