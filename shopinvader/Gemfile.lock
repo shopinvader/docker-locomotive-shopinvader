@@ -278,6 +278,7 @@ GEM
     font-awesome-sass (5.2.0)
       sassc (>= 1.11)
     fspath (3.1.0)
+    get_process_mem (0.2.3)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     grape (1.1.0)
@@ -399,6 +400,9 @@ GEM
     progress (3.5.0)
     public_suffix (3.0.3)
     puma (3.12.1)
+    puma_worker_killer (0.1.0)
+      get_process_mem (~> 0.2)
+      puma (>= 2.7, < 4)
     pundit (1.1.0)
       activesupport (>= 3.0.0)
     rack (2.0.7)
@@ -539,6 +543,7 @@ DEPENDENCIES
   mongo_session_store (~> 3.1.0)
   mongoid
   puma (~> 3.11)
+  puma_worker_killer
   rack-cors
   rails (~> 5.2.2)
   sass-rails (~> 5.0)
