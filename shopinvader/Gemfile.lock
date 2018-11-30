@@ -236,6 +236,7 @@ GEM
       rails (>= 3.0)
     font-awesome-sass (5.0.13)
       sassc (>= 1.11)
+    get_process_mem (0.2.3)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     grape (1.1.0)
@@ -338,6 +339,9 @@ GEM
       mail (>= 2.0)
     public_suffix (3.0.3)
     puma (3.11.4)
+    puma_worker_killer (0.1.0)
+      get_process_mem (~> 0.2)
+      puma (>= 2.7, < 4)
     pundit (1.1.0)
       activesupport (>= 3.0.0)
     rack (2.0.6)
@@ -464,6 +468,7 @@ DEPENDENCIES
   locomotivecms_steam!
   mongo_session_store (~> 3.1.0)
   puma (~> 3.11.4)
+  puma_worker_killer
   rails_12factor
   sass-rails
   sentry-raven

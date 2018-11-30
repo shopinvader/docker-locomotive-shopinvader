@@ -2,6 +2,16 @@
 
 # see documentation here https://github.com/puma/puma/blob/master/examples/config.rb
 
+before_fork do
+  require 'puma_worker_killer'
+  PumaWorkerKiller.config do |config|
+    config.ram        = ENV['PUMA_MAX_RAM'] || 4096
+    config.frequency  = 60
+    config.rolling_restart_frequency = 12 * 3600
+  end
+  PumaWorkerKiller.start
+end
+
 environment ENV['RAILS_ENV']
 
 
