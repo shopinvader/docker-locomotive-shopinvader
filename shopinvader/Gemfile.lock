@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/akretion/locomotive_shopinvader.git
-  revision: 152a9e0dbbce031680cb765c79fbde4899552811
+  revision: 97162e5ffe48d9ba15f19dabf95c2c46a61348ca
   branch: v3.4.x
   specs:
     shop_invader (0.1.0)
