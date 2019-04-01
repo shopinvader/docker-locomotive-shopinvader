@@ -5,11 +5,11 @@ development:
     default:
       # Defines the name of the default database that Mongoid can connect to.
       # (required).
-      database: shopinvader
+      database: locomotiveapp_development
       # Provides the hosts the default client can connect to. Must be an array
       # of host:port pairs. (required)
       hosts:
-        - db:27017
+        - localhost:27017
       options:
         # Change the default write concern. (default = { w: 1 })
         # write:
@@ -20,6 +20,8 @@ development:
         # (default: primary)
         # read:
         #   mode: :secondary_preferred
+        #   tag_sets:
+        #     - use: web
 
         # The name of the user for authentication.
         # user: 'user'
@@ -32,11 +34,13 @@ development:
         #   - 'dbOwner'
 
         # Change the default authentication mechanism. Valid options are: :scram,
-        # :mongodb_cr, :mongodb_x509, and :plain. (default on 3.0 is :scram, default
-        # on 2.4 and 2.6 is :plain)
+        # :mongodb_cr, :mongodb_x509, and :plain. Note that all authentication
+        # mechanisms require username and password, with the exception of :mongodb_x509.
+        # Default on mongoDB 3.0 is :scram, default on 2.4 and 2.6 is :plain.
         # auth_mech: :scram
 
-        # The database or source to authenticate the user against. (default: admin)
+        # The database or source to authenticate the user against.
+        # (default: the database specified above or admin)
         # auth_source: admin
 
         # Force a the driver cluster to behave in a certain manner instead of auto-
@@ -48,8 +52,8 @@ development:
         # via ismaster commands. (default: 10)
         # heartbeat_frequency: 10
 
-        # The time in seconds for selecting servers for a near read preference. (default: 5)
-        # local_threshold: 5
+        # The time in seconds for selecting servers for a near read preference. (default: 0.015)
+        # local_threshold: 0.015
 
         # The timeout in seconds for selecting a server for an operation. (default: 30)
         # server_selection_timeout: 30
@@ -90,7 +94,7 @@ development:
         # A passphrase for the private key.
         # ssl_key_pass_phrase: password
 
-        # Whether or not to do peer certification validation. (default: false)
+        # Whether or not to do peer certification validation. (default: true)
         # ssl_verify: true
 
         # The file containing a set of concatenated certification authority certifications
@@ -118,12 +122,29 @@ development:
     # existing method. (default: false)
     # scope_overwrite_exception: false
 
+    # Raise an error when defining a field with the same name as an
+    # existing method. (default: false)
+    # duplicate_fields_exception: false
+
     # Use Active Support's time zone in conversions. (default: true)
     # use_activesupport_time_zone: true
 
     # Ensure all times are UTC in the app side. (default: false)
     # use_utc: false
 
+    # Set the Mongoid and Ruby driver log levels when not in a Rails
+    # environment. The Mongoid logger will be set to the Rails logger
+    # otherwise.(default: :info)
+    # log_level: :info
+
+    # Control whether `belongs_to` association is required. By default
+    # `belongs_to` will trigger a validation error if the association
+    # is not present. (default: true)
+    # belongs_to_required_by_default: true
+
+    # Application name that is printed to the mongodb logs upon establishing a
+    # connection in server versions >= 3.4. Note that the name cannot exceed 128 bytes.
+    # app_name: MyApplicationName
 test:
   clients:
     default:

@@ -86,16 +86,28 @@ Devise.setup do |config|
   # from the server. You can disable this option at your own risk.
   # config.clean_up_csrf_token_on_authentication = true
 
+  # When false, Devise will not attempt to reload routes on eager load.
+  # This can reduce the time taken to boot the app but if your application
+  # requires the Devise mappings to be loaded during boot time the application
+  # won't boot properly.
+  # config.reload_routes = true
+
   # ==> Configuration for :database_authenticatable
-  # For bcrypt, this is the cost for hashing the password and defaults to 10. If
-  # using other encryptors, it sets how many times you want the password re-encrypted.
+  # For bcrypt, this is the cost for hashing the password and defaults to 11. If
+  # using other algorithms, it sets how many times you want the password to be hashed.
   #
   # Limiting the stretches to just one in testing will increase the performance of
   # your test suite dramatically. However, it is STRONGLY RECOMMENDED to not use
   # a value less than 10 in other environments. Note that, for bcrypt (the default
-  # encryptor), the cost increases exponentially with the number of stretches (e.g.
+  # algorithm), the cost increases exponentially with the number of stretches (e.g.
   # a value of 20 is already extremely slow: approx. 60 seconds for 1 calculation).
-  config.stretches = Rails.env.test? ? 1 : 10
+  config.stretches = Rails.env.test? ? 1 : 11
+
+  # Set up a pepper to generate the hashed password.
+  # config.pepper = '9d1c351e8842d005fae889116916983d8d307a801db62870a27438697a6df8e9de69526daf7c9f5e4bbe43452f24ab15074121e19f66af406e2c030c8a5f993f'
+
+  # Send a notification to the original email when the user's email is changed.
+  # config.send_email_changed_notification = false
 
   # Setup a pepper to generate the encrypted password.
   config.pepper = ENV['DEVISE_PEPPER']
@@ -141,12 +153,12 @@ Devise.setup do |config|
 
   # ==> Configuration for :validatable
   # Range for password length.
-  config.password_length = 6..72
+  config.password_length = 6..128
 
   # Email regex used to validate email formats. It simply asserts that
   # one (and only one) @ exists in the given string. This is mainly
   # to give user feedback and not to assert the e-mail validity.
-  # config.email_regexp = /\A[^@]+@[^@]+\z/
+  config.email_regexp = /\A[^@\s]+@[^@\s]+\z/
 
   # ==> Configuration for :timeoutable
   # The time you want to timeout the user session without activity. After this
@@ -194,11 +206,11 @@ Devise.setup do |config|
   # config.sign_in_after_reset_password = true
 
   # ==> Configuration for :encryptable
-  # Allow you to use another encryption algorithm besides bcrypt (default). You can use
-  # :sha1, :sha512 or encryptors from others authentication tools as :clearance_sha1,
-  # :authlogic_sha512 (then you should set stretches above to 20 for default behavior)
-  # and :restful_authentication_sha1 (then you should set stretches to 10, and copy
-  # REST_AUTH_SITE_KEY to pepper).
+  # Allow you to use another hashing or encryption algorithm besides bcrypt (default).
+  # You can use :sha1, :sha512 or algorithms from others authentication tools as
+  # :clearance_sha1, :authlogic_sha512 (then you should set stretches above to 20
+  # for default behavior) and :restful_authentication_sha1 (then you should set
+  # stretches to 10, and copy REST_AUTH_SITE_KEY to pepper).
   #
   # Require the `devise-encryptable` gem when using anything other than bcrypt
   # config.encryptor = :sha512
@@ -207,7 +219,7 @@ Devise.setup do |config|
   # Turn scoped views on. Before rendering "sessions/new", it will first check for
   # "users/sessions/new". It's turned off by default because it's slower if you
   # are using only default views.
-  config.scoped_views = true
+  # config.scoped_views = false
 
   # Configure the default scope given to Warden. By default it's the first
   # devise role declared in your routes (usually :user).
