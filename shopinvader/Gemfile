@@ -9,6 +9,7 @@ gem 'custom_fields', github: 'locomotivecms/custom_fields', ref: '251b1b9', requ
 gem 'locomotivecms_steam', github: 'akretion/steam', ref: '7afb7f3', require: false
 gem 'locomotivecms', github: 'locomotivecms/engine', ref: '8815154'
 gem 'shop_invader', github: 'akretion/locomotive_shopinvader', branch: 'v4.0.x-fix-port'
+gem 'mongo_session_store', '~> 3.1.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2'

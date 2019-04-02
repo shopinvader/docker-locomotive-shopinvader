@@ -369,6 +369,9 @@ GEM
       i18n (>= 0.6.4, <= 2)
     mongo (2.8.0)
       bson (>= 4.4.2, < 5.0.0)
+    mongo_session_store (3.1.0)
+      actionpack (>= 4.0)
+      mongo (~> 2.0)
     mongoid (6.4.2)
       activemodel (>= 5.1, < 6.0.0)
       mongo (>= 2.5.1, < 3.0.0)
@@ -533,6 +536,7 @@ DEPENDENCIES
   locomotivecms!
   locomotivecms_common!
   locomotivecms_steam!
+  mongo_session_store (~> 3.1.0)
   mongoid
   puma (~> 3.11)
   rack-cors
