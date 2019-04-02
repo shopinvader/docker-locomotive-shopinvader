@@ -1,4 +1,4 @@
-FROM ruby:2.5.1-slim-stretch
+FROM ruby:2.6.2-slim-stretch
 
 RUN bundle config --global frozen 1
 
