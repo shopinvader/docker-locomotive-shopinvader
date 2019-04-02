@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
-  # Devise will use the `secret_key_base` on Rails 4+ applications as its `secret_key`
+  # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
   # config.secret_key = 'd039eaba25b8f421bf260604c5e7152b6bfd7266d946c43cf7b5397c81290293593052837f16cf9521756e2e045faaa44ed9dae8259452fd631a97709f85481a'
 
@@ -12,9 +14,13 @@ Devise.setup do |config|
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  #config.mailer_sender = ENV['SMTP_SENDER']
+  # config.mailer_sender = ENV['SMTP_SENDER']
+
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
+
+  # Configure the parent class responsible to send e-mails.
+  # config.parent_mailer = 'ActionMailer::Base'
 
   # ==> ORM configuration
   # Load and configure the ORM. Supports :active_record (default) and
@@ -104,13 +110,13 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 11
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = '9d1c351e8842d005fae889116916983d8d307a801db62870a27438697a6df8e9de69526daf7c9f5e4bbe43452f24ab15074121e19f66af406e2c030c8a5f993f'
+  config.pepper = ENV['DEVISE_PEPPER']
 
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false
 
-  # Setup a pepper to generate the encrypted password.
-  config.pepper = ENV['DEVISE_PEPPER']
+  # Send a notification email when the user's password is changed.
+  # config.send_password_change_notification = false
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without

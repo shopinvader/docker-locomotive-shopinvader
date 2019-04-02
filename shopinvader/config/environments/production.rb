@@ -31,6 +31,9 @@ Rails.application.configure do
 
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
+  # Enable serving of images, stylesheets, and JavaScripts from an asset server.
+  config.action_controller.asset_host = 'https://d1bqx47vp6rlu8.cloudfront.net'
+
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = 'X-Sendfile' # for Apache
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
@@ -53,20 +56,9 @@ Rails.application.configure do
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
 
-  # Enable serving of images, stylesheets, and JavaScripts from an asset server.
-  # config.action_controller.asset_host = 'http://assets.example.com'
-
-  # Mail configuration
-  config.action_mailer.perform_deliveries = true
-  config.action_mailer.default :charset => "utf-8"
-  ActionMailer::Base.smtp_settings = {
-    :address              => ENV["SMTP_ADDRESS"],
-    :port                 => ENV["SMTP_PORT"],
-    :user_name            => ENV["SMTP_USERNAME"],
-    :password             => ENV["SMTP_PASSWORD"],
-    :authentication       => "plain",
-    :enable_starttls_auto => (ENV['SMTP_ENABLE_STARTTLS_AUTO'] || "true") == "true"
-  }
+  # Use a real queuing backend for Active Job (and separate queues per environment)
+  # config.active_job.queue_adapter     = :resque
+  # config.active_job.queue_name_prefix = "locomotiveapp_#{Rails.env}"
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
@@ -77,4 +69,32 @@ Rails.application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  config.action_mailer.perform_caching = false
+
+  # Ignore bad email addresses and do not raise email delivery errors.
+  # Set this to true and configure the email server for immediate delivery to raise delivery errors.
+  # config.action_mailer.raise_delivery_errors = false
+
+  config.action_mailer.delivery_method    = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.smtp_settings = {
+    :user_name              => ENV["SMTP_USERNAME"],
+    :password               => ENV["SMTP_PASSWORD"],
+    :domain                 => ENV["SMTP_HELO_DOMAIN"],
+    :address                => ENV["SMTP_ADDRESS"],
+    :port                   => ENV["SMTP_PORT"],
+    :authentication         => ENV["SMTP_AUTHENTICATION"] || :plain,
+    :enable_starttls_auto   => (ENV['SMTP_ENABLE_STARTTLS_AUTO'] || "true") == "true"
+  }
+
+  # Use a different logger for distributed setups.
+  # require 'syslog/logger'
+  # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
+
+  if ENV["RAILS_LOG_TO_STDOUT"].present?
+    logger           = ActiveSupport::Logger.new(STDOUT)
+    logger.formatter = config.log_formatter
+    config.logger    = ActiveSupport::TaggedLogging.new(logger)
+  end
 end

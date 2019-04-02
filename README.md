@@ -48,6 +48,7 @@ DEVISE_PEPPER (for more information : https://stackoverflow.com/questions/459887
 
 DRAGON_FLY_SECRET
 LOCOMOTIVE_ENABLE_REGISTRATION  (true or false)
+LOCOMOTIVE_ADMIN_SSL_REDIRECT   (true or false, default true)
 ```
 
 
@@ -77,15 +78,22 @@ S3_CACHE_CONTROL
 
 ```
 SMTP_ENABLE_STARTTLS_AUTO (default True)
+SMTP_HELO_DOMAIN
 SMTP_ADDRESS
 SMTP_PORT
 SMTP_SENDER
 SMTP_USERNAME
 SMTP_PASSWORD
+SMTP_AUTHENTICATION (default plain)
 ```
 
 ## Sentry configuration
 
 ```
 SENTRY_DSN
+```
+
+## Index generation
+```
+rake db:mongoid:create_indexes
 ```

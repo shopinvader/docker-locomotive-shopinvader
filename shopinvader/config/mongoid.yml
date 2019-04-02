@@ -1,3 +1,11 @@
+production:
+  clients:
+    default:
+      uri: <%= ENV['MONGODB_URI'] %>
+      options:
+        # consistency: :strong
+        # identity_map_enabled: true
+
 development:
   # Configure available database clients. (required)
   clients:
@@ -5,11 +13,11 @@ development:
     default:
       # Defines the name of the default database that Mongoid can connect to.
       # (required).
-      database: locomotiveapp_development
+      database: shopinvader
       # Provides the hosts the default client can connect to. Must be an array
       # of host:port pairs. (required)
       hosts:
-        - localhost:27017
+        - db:27017
       options:
         # Change the default write concern. (default = { w: 1 })
         # write:
@@ -152,9 +160,6 @@ test:
       hosts:
         - db:27017
       options:
+        read:
+          mode: :primary
         max_pool_size: 1
-
-production:
-  clients:
-    default:
-      uri: <%= ENV['MONGODB_URI'] || ENV['MONGOHQ_URL'] || ENV['MONGO_URL'] %>

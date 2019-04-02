@@ -1,6 +1,7 @@
 Locomotive.configure do |config|
 
   # enable it if you want Locomotive to render the site of the Rails application embedding the engine
+  # TODO see if needed
   # config.host = 'mylocomotiveapp.com'
 
   # list of forbidden handles for a site because there are in conflicts with internal resources.
@@ -22,6 +23,9 @@ Locomotive.configure do |config|
 
   # available locales suggested to "localize" a site. You will have to pick up at least one among that list.
   # config.site_locales = %w{en de fr pl pt pt-BR it nl nb es ru ja cs bg sk uk}
+  # sadly mongodb have index limitation we need to restrict the index used here
+  # TODO we should make it configurable and take the time to document this limitation
+  config.site_locales = %w{en de fr es pt}
 
   # tell if logs are enabled. Useful for debug purpose.
   config.enable_logs = true
@@ -34,7 +38,7 @@ Locomotive.configure do |config|
 
   # Uncomment this line to force Locomotive to redirect all requests in the
   # back-office to https in production.
-  # config.enable_admin_ssl = Rails.env.production?
+  config.enable_admin_ssl = (ENV['LOCOMOTIVE_ADMIN_SSL_REDIRECT'] || 'true') == 'true'
 
   # Configure the e-mail address which will be shown in the DeviseMailer, NotificationMailer, ...etc
   # if you do not put the domain name in the email, Locomotive will take the default domain name depending
