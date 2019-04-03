@@ -39,9 +39,6 @@ if ENV['RAILS_ENV'] == 'development'
   worker_timeout 3600
 end
 
-# listen on 0.0.0.0
-bind 'tcp://0.0.0.0:3000'
-
 # expose PUMA control app if auth token
 if ENV['PUMA_AUTH_TOKEN']
   activate_control_app 'tcp://0.0.0.0:9293', { auth_token: ENV['PUMA_AUTH_TOKEN'] }
