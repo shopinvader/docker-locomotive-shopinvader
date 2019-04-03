@@ -38,5 +38,11 @@ module Shopinvader
       end
     end
 
+    initializer 'station.steam', after: 'steam' do |app|
+      Locomotive::Steam.configure do |config|
+        ShopInvader.setup
+      end
+    end
+
   end
 end
