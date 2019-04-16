@@ -1,16 +1,16 @@
 GIT
   remote: https://github.com/akretion/locomotive_shopinvader.git
-  revision: 615902b9648b93c845fe1278c880074b7245dfc8
-  branch: v4.0.x-fix-port
+  revision: 41e95ec3acf02bdd52aa6ae31556b7dfda7c0453
+  branch: v4.0.x
   specs:
     shop_invader (0.1.0)
       algoliasearch (~> 1.13.0)
-      faraday (~> 0.14.0)
+      faraday (~> 0.15.2)
 
 GIT
   remote: https://github.com/akretion/steam.git
-  revision: 7afb7f3c8aab82a2db66e4771438455566025430
-  ref: 7afb7f3
+  revision: 4ccd6e84afb8df18deef93e9cbb8b3a838f1d939
+  branch: master-pending-merge
   specs:
     locomotivecms_steam (1.5.0.beta3)
       RedCloth (~> 4.3.2)
@@ -43,7 +43,6 @@ GIT
 GIT
   remote: https://github.com/locomotivecms/common.git
   revision: c2a1c48c326e947bca2c6f56dacda8a7c8f3930a
-  ref: c2a1c48
   specs:
     locomotivecms_common (0.3.1)
       activesupport (>= 5.1.5, < 6.0)
@@ -54,7 +53,6 @@ GIT
 GIT
   remote: https://github.com/locomotivecms/custom_fields.git
   revision: 251b1b93472506f5eb255d60d92f65bcfc354095
-  ref: 251b1b9
   specs:
     custom_fields (2.10.0.beta3)
       activesupport (>= 5.1, < 6.0)
@@ -65,19 +63,18 @@ GIT
 
 GIT
   remote: https://github.com/locomotivecms/engine.git
-  revision: 881515479ab83b7548290a4b27a358907eac1bf5
-  ref: 8815154
+  revision: 650f4e65f4010c41c813b1f985433735a13559c8
   specs:
     locomotivecms (4.0.0.alpha3)
       actionmailer-with-request (~> 0.5.0)
       autoprefixer-rails (~> 8.0.0)
       bazaar (~> 0.0.2)
       bootstrap-kaminari-views (~> 0.0.5)
-      bootstrap-sass (~> 3.3.7)
+      bootstrap-sass (~> 3.4.1)
       carrierwave-imageoptim (= 0.1.5)
       carrierwave-mongoid (~> 1.1.0)
       codemirror-rails (~> 5.16.0)
-      devise (~> 4.4.1)
+      devise (~> 4.6.2)
       devise-encryptable (~> 0.2.0)
       dragonfly (~> 1.2.0)
       flash_cookie_session (~> 1.1.1)
@@ -99,7 +96,7 @@ GIT
       origin (~> 2.3.1)
       pundit (~> 1.1.0)
       rack-cache (~> 1.7.1)
-      rails (>= 5.2.1, < 6.0)
+      rails (>= 5.2.3, < 6.0)
       rails-i18n (~> 5.1.1)
       responders (~> 2.4.0)
       simple_form (~> 4.0.1)
@@ -166,7 +163,7 @@ GEM
     autoprefixer-rails (8.0.0)
       execjs
     aws-eventstream (1.0.2)
-    aws-partitions (1.148.0)
+    aws-partitions (1.149.0)
     aws-sdk-core (3.48.3)
       aws-eventstream (~> 1.0, >= 1.0.2)
       aws-partitions (~> 1.0)
@@ -187,13 +184,13 @@ GEM
       thread_safe (~> 0.3, >= 0.3.1)
     bazaar (0.0.2)
     bcrypt (3.1.12)
-    bindex (0.6.0)
+    bindex (0.7.0)
     bootstrap-kaminari-views (0.0.5)
       kaminari (>= 0.13)
       rails (>= 3.1)
-    bootstrap-sass (3.3.7)
+    bootstrap-sass (3.4.1)
       autoprefixer-rails (>= 5.2.1)
-      sass (>= 3.3.4)
+      sassc (>= 2.0.0)
     bson (4.4.2)
     builder (3.2.3)
     byebug (11.0.1)
@@ -253,7 +250,7 @@ GEM
     crass (1.0.4)
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
-    devise (4.4.3)
+    devise (4.6.2)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 4.1.0, < 6.0)
@@ -270,7 +267,7 @@ GEM
     erubi (1.8.0)
     execjs (2.7.0)
     exifr (1.3.6)
-    faraday (0.14.0)
+    faraday (0.15.4)
       multipart-post (>= 1.2, < 3)
     ffi (1.10.0)
     flash_cookie_session (1.1.6)
@@ -366,7 +363,7 @@ GEM
     moneta (1.0.0)
     monetize (1.9.1)
       money (~> 6.12)
-    money (6.13.2)
+    money (6.13.3)
       i18n (>= 0.6.4, <= 2)
     mongo (2.8.0)
       bson (>= 4.4.2, < 5.0.0)

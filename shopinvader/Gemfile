@@ -4,11 +4,11 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 gem 'mongoid'
 gem 'devise'
 
-gem 'locomotivecms_common', github: 'locomotivecms/common', ref: 'c2a1c48', require: false
-gem 'custom_fields', github: 'locomotivecms/custom_fields', ref: '251b1b9', require: false
-gem 'locomotivecms_steam', github: 'akretion/steam', ref: '7afb7f3', require: false
-gem 'locomotivecms', github: 'locomotivecms/engine', ref: '8815154'
-gem 'shop_invader', github: 'akretion/locomotive_shopinvader', branch: 'v4.0.x-fix-port'
+gem 'locomotivecms_common', github: 'locomotivecms/common'
+gem 'custom_fields', github: 'locomotivecms/custom_fields'
+gem 'locomotivecms_steam', github: 'akretion/steam', branch: 'master-pending-merge'
+gem 'locomotivecms', github: 'locomotivecms/engine'
+gem 'shop_invader', github: 'akretion/locomotive_shopinvader', branch: 'v4.0.x'
 gem 'mongo_session_store', '~> 3.1.0'
 
 # TODO FIXME needed to precompile asset in docker
