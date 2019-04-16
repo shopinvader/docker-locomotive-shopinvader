@@ -32,7 +32,7 @@ Rails.application.configure do
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
-  config.action_controller.asset_host = 'https://d1bqx47vp6rlu8.cloudfront.net'
+  config.action_controller.asset_host = ENV['CDN_ASSET_HOST']
 
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = 'X-Sendfile' # for Apache
@@ -81,12 +81,14 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     :user_name              => ENV["SMTP_USERNAME"],
     :password               => ENV["SMTP_PASSWORD"],
-    :domain                 => ENV["SMTP_HELO_DOMAIN"],
     :address                => ENV["SMTP_ADDRESS"],
     :port                   => ENV["SMTP_PORT"],
     :authentication         => ENV["SMTP_AUTHENTICATION"] || :plain,
     :enable_starttls_auto   => (ENV['SMTP_ENABLE_STARTTLS_AUTO'] || "true") == "true"
   }
+  if ENV["SMTP_HELO_DOMAIN"].present?
+    config.action_mailer.smtp_settings[:domain] = ENV["SMTP_HELO_DOMAIN"]
+  end
 
   # Use a different logger for distributed setups.
   # require 'syslog/logger'
