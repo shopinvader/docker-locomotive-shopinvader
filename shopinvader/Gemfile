@@ -8,7 +8,7 @@ gem 'locomotivecms_common', github: 'locomotivecms/common'
 gem 'custom_fields', github: 'locomotivecms/custom_fields'
 gem 'locomotivecms_steam', github: 'akretion/steam', branch: 'master-pending-merge'
 gem 'locomotivecms', github: 'locomotivecms/engine'
-gem 'shop_invader', github: 'akretion/locomotive_shopinvader', branch: 'v4.0.x'
+gem 'shop_invader', github: 'akretion/locomotive-shopinvader', branch: 'v4.0.x-odoo-8'
 gem 'mongo_session_store', '~> 3.1.0'
 
 # TODO FIXME needed to precompile asset in docker

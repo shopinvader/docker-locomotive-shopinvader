@@ -1,11 +1,11 @@
 GIT
-  remote: https://github.com/akretion/locomotive_shopinvader.git
-  revision: 41e95ec3acf02bdd52aa6ae31556b7dfda7c0453
-  branch: v4.0.x
+  remote: https://github.com/akretion/locomotive-shopinvader.git
+  revision: b2cb2c6e2c7d77c9eee668c456f791d634b91031
+  branch: v4.0.x-odoo-8
   specs:
     shop_invader (0.1.0)
       algoliasearch (~> 1.13.0)
-      faraday (~> 0.15.2)
+      faraday (~> 0.15.4)
 
 GIT
   remote: https://github.com/akretion/steam.git
