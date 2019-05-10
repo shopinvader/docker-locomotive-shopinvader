@@ -1,3 +1,5 @@
+#!/bin/bash
+set -e
 rm shopinvader/Gemfile.lock
 docky run bundle install
 git add shopinvader/Gemfile shopinvader/Gemfile.lock
