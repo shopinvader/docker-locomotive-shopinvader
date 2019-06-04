@@ -21,7 +21,7 @@ GIT
 
 GIT
   remote: https://github.com/locomotivecms/engine.git
-  revision: 4e939d447973a13109c7668caab9f5f1deea564c
+  revision: 09a62e4f244a4415dc575851a1e478635bd58c25
   specs:
     locomotivecms (4.0.0.rc0)
       actionmailer-with-request (~> 0.5.0)
@@ -67,7 +67,7 @@ GIT
 
 GIT
   remote: https://github.com/locomotivecms/steam.git
-  revision: 28222438af3ddffcd69a18e9c215f8e37d9fc453
+  revision: 5b6e7ca57784b8a39747fb0257629479289b860f
   specs:
     locomotivecms_steam (1.5.0.rc0)
       RedCloth (~> 4.3.2)
@@ -99,7 +99,7 @@ GIT
 
 GIT
   remote: https://github.com/shopinvader/locomotive-shopinvader.git
-  revision: c89cadf3bf5a125afeaa338eecab3ee7b44d81e2
+  revision: 468ae5e4a1b44b8eeb32f7df43672f075dac892c
   branch: v4.0.x
   specs:
     shop_invader (0.1.0)
@@ -168,8 +168,8 @@ GEM
     autoprefixer-rails (8.0.0)
       execjs
     aws-eventstream (1.0.3)
-    aws-partitions (1.167.0)
-    aws-sdk-core (3.53.1)
+    aws-partitions (1.171.0)
+    aws-sdk-core (3.54.2)
       aws-eventstream (~> 1.0, >= 1.0.2)
       aws-partitions (~> 1.0)
       aws-sigv4 (~> 1.1)
@@ -177,10 +177,10 @@ GEM
     aws-sdk-kms (1.21.0)
       aws-sdk-core (~> 3, >= 3.53.0)
       aws-sigv4 (~> 1.1)
-    aws-sdk-s3 (1.40.0)
+    aws-sdk-s3 (1.41.0)
       aws-sdk-core (~> 3, >= 3.53.0)
       aws-sdk-kms (~> 1)
-      aws-sigv4 (~> 1.0)
+      aws-sigv4 (~> 1.1)
     aws-sigv4 (1.1.0)
       aws-eventstream (~> 1.0, >= 1.0.2)
     axiom-types (0.1.1)
@@ -188,7 +188,7 @@ GEM
       ice_nine (~> 0.11.0)
       thread_safe (~> 0.3, >= 0.3.1)
     bazaar (0.0.2)
-    bcrypt (3.1.12)
+    bcrypt (3.1.13)
     bindex (0.7.0)
     bootstrap-kaminari-views (0.0.5)
       kaminari (>= 0.13)
