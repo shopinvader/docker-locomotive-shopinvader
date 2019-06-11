@@ -67,7 +67,7 @@ GIT
 
 GIT
   remote: https://github.com/locomotivecms/steam.git
-  revision: 5b6e7ca57784b8a39747fb0257629479289b860f
+  revision: 742fb927b6dd47d7f887cb22f6a20e4dae0d338d
   specs:
     locomotivecms_steam (1.5.0.rc0)
       RedCloth (~> 4.3.2)
@@ -87,7 +87,7 @@ GIT
       moneta (~> 1.0.0)
       morphine (~> 0.1.1)
       multi_json (~> 1.13.1)
-      nokogiri (~> 1.8.2)
+      nokogiri (~> 1.10.3)
       pony (~> 1.12)
       rack-cache (~> 1.7.0)
       rack-rewrite (~> 1.5.1)
@@ -168,7 +168,7 @@ GEM
     autoprefixer-rails (8.0.0)
       execjs
     aws-eventstream (1.0.3)
-    aws-partitions (1.171.0)
+    aws-partitions (1.174.0)
     aws-sdk-core (3.54.2)
       aws-eventstream (~> 1.0, >= 1.0.2)
       aws-partitions (~> 1.0)
@@ -177,7 +177,7 @@ GEM
     aws-sdk-kms (1.21.0)
       aws-sdk-core (~> 3, >= 3.53.0)
       aws-sigv4 (~> 1.1)
-    aws-sdk-s3 (1.41.0)
+    aws-sdk-s3 (1.42.0)
       aws-sdk-core (~> 3, >= 3.53.0)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.1)
@@ -370,12 +370,12 @@ GEM
     mimemagic (0.3.3)
     mimetype-fu (0.1.2)
     mini_mime (1.0.1)
-    mini_portile2 (2.3.0)
+    mini_portile2 (2.4.0)
     minitest (5.11.3)
     moneta (1.0.0)
     monetize (1.9.1)
       money (~> 6.12)
-    money (6.13.3)
+    money (6.13.4)
       i18n (>= 0.6.4, <= 2)
     mongo (2.8.0)
       bson (>= 4.4.2, < 5.0.0)
@@ -398,8 +398,8 @@ GEM
     mustermann-grape (1.0.0)
       mustermann (~> 1.0.0)
     nio4r (2.3.1)
-    nokogiri (1.8.5)
-      mini_portile2 (~> 2.3.0)
+    nokogiri (1.10.3)
+      mini_portile2 (~> 2.4.0)
     nokogumbo (1.5.0)
       nokogiri
     origin (2.3.1)
@@ -526,9 +526,9 @@ GEM
       activemodel (>= 5.0)
       bindex (>= 0.4.0)
       railties (>= 5.0)
-    websocket-driver (0.7.0)
+    websocket-driver (0.7.1)
       websocket-extensions (>= 0.1.0)
-    websocket-extensions (0.1.3)
+    websocket-extensions (0.1.4)
     xpath (3.2.0)
       nokogiri (~> 1.8)
     yajl-ruby (1.3.1)
@@ -551,6 +551,7 @@ DEPENDENCIES
   locomotivecms_steam!
   mongo_session_store (~> 3.1.0)
   mongoid
+  nokogiri (>= 1.10.3)
   puma (~> 3.11)
   puma_worker_killer
   rack-cors
