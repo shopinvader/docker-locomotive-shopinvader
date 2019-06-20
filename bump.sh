@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-rm shopinvader/Gemfile.lock
+rm -f shopinvader/Gemfile.lock
 docky run bundle install
 git add shopinvader/Gemfile shopinvader/Gemfile.lock
 TAG="v4.0.x-`date +%Y%m%d`"
