@@ -5,7 +5,7 @@ production:
       options:
         # consistency: :strong
         # identity_map_enabled: true
-
+        max_pool_size: <%= ENV['MONGODB_MAX_POOL_SIZE'] || 5 %>
 development:
   # Configure available database clients. (required)
   clients:

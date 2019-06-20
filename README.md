@@ -41,7 +41,6 @@ aws s3 sync s3://mybucket/uploaded_assets public/uploaded_assets
 ## RAILS configuration
 ```
 RAILS_ENV
-MONGODB_URI
 SECRET_KEY_BASE
 
 DEVISE_PEPPER (for more information : https://stackoverflow.com/questions/45988723/what-password-hashing-algorithm-does-devise-use and https://github.com/plataformatec/devise/blob/88724e10adaf9ffd1d8dbfbaadda2b9d40de756a/lib/devise/encryptor.rb)
@@ -51,6 +50,10 @@ LOCOMOTIVE_ENABLE_REGISTRATION  (true or false)
 LOCOMOTIVE_ADMIN_SSL_REDIRECT   (true or false, default true)
 ```
 
+## MONGO configuration
+
+MONGODB_URI
+MONGODB_MAX_POOL_SIZE (default: 5)
 
 ## PUMA configuration
 
