@@ -48,6 +48,8 @@ DEVISE_PEPPER (for more information : https://stackoverflow.com/questions/459887
 DRAGON_FLY_SECRET
 LOCOMOTIVE_ENABLE_REGISTRATION  (true or false)
 LOCOMOTIVE_ADMIN_SSL_REDIRECT   (true or false, default true)
+RAILS_SERVE_STATIC_FILES (true or false, default false)
+
 ```
 
 ## MONGO configuration
