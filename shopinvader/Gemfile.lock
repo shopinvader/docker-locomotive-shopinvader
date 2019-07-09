@@ -21,7 +21,7 @@ GIT
 
 GIT
   remote: https://github.com/locomotivecms/engine.git
-  revision: 09a62e4f244a4415dc575851a1e478635bd58c25
+  revision: 65012fb1f4071b96f89cc50a80689ce3f7463332
   specs:
     locomotivecms (4.0.0.rc0)
       actionmailer-with-request (~> 0.5.0)
@@ -51,6 +51,7 @@ GIT
       kaminari-actionview (~> 1.1.1)
       kaminari-mongoid (~> 1.0.1)
       locomotivecms_steam (~> 1.5.0.rc0)
+      mongo (= 2.8.0)
       mongoid (~> 6.4.0)
       mongoid-tree (~> 2.1.0)
       multi_json (~> 1.13.1)
@@ -67,7 +68,7 @@ GIT
 
 GIT
   remote: https://github.com/locomotivecms/steam.git
-  revision: 4f0f63c5aed494d1bf536d85f24ae73b4ea0ecd8
+  revision: 77fa10c6156da36c423065dcdb22c42e595b70df
   specs:
     locomotivecms_steam (1.5.0.rc0)
       RedCloth (~> 4.3.2)
@@ -99,7 +100,7 @@ GIT
 
 GIT
   remote: https://github.com/shopinvader/locomotive-shopinvader.git
-  revision: 923cdc1fb56557bb4ddfcbaf442085f04c85bb1d
+  revision: 054defd12915918809c2f6741eb9b3c137c186a3
   branch: v4.0.x
   specs:
     shop_invader (0.1.0)
@@ -168,8 +169,8 @@ GEM
     autoprefixer-rails (8.0.0)
       execjs
     aws-eventstream (1.0.3)
-    aws-partitions (1.183.0)
-    aws-sdk-core (3.58.0)
+    aws-partitions (1.185.0)
+    aws-sdk-core (3.59.0)
       aws-eventstream (~> 1.0, >= 1.0.2)
       aws-partitions (~> 1.0)
       aws-sigv4 (~> 1.1)
@@ -177,7 +178,7 @@ GEM
     aws-sdk-kms (1.23.0)
       aws-sdk-core (~> 3, >= 3.58.0)
       aws-sigv4 (~> 1.1)
-    aws-sdk-s3 (1.44.0)
+    aws-sdk-s3 (1.45.0)
       aws-sdk-core (~> 3, >= 3.58.0)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.1)
@@ -288,7 +289,8 @@ GEM
     font-awesome-sass (5.2.0)
       sassc (>= 1.11)
     fspath (3.1.1)
-    get_process_mem (0.2.3)
+    get_process_mem (0.2.4)
+      ffi (~> 1.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     grape (1.1.0)
@@ -369,15 +371,15 @@ GEM
     mime-types-data (3.2019.0331)
     mimemagic (0.3.3)
     mimetype-fu (0.1.2)
-    mini_mime (1.0.1)
+    mini_mime (1.0.2)
     mini_portile2 (2.4.0)
     minitest (5.11.3)
     moneta (1.0.0)
-    monetize (1.9.1)
+    monetize (1.9.2)
       money (~> 6.12)
     money (6.13.4)
       i18n (>= 0.6.4, <= 2)
-    mongo (2.9.0)
+    mongo (2.8.0)
       bson (>= 4.4.2, < 5.0.0)
     mongo_session_store (3.1.0)
       actionpack (>= 4.0)
@@ -397,7 +399,7 @@ GEM
     mustermann (1.0.3)
     mustermann-grape (1.0.0)
       mustermann (~> 1.0.0)
-    nio4r (2.3.1)
+    nio4r (2.4.0)
     nokogiri (1.10.3)
       mini_portile2 (~> 2.4.0)
     nokogumbo (1.5.0)
