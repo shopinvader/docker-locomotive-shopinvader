@@ -29,4 +29,7 @@ services:
        - ./data/log:/workspace/log
        - ./data/public/sites:/workspace/public/sites
        - ./data/public/uploaded_assets:/workspace/public/uploaded_assets
+    labels:
+      docky.user: ubuntu
+      docky.main.service: True
 version: '3'

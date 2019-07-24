@@ -100,7 +100,7 @@ GIT
 
 GIT
   remote: https://github.com/shopinvader/locomotive-shopinvader.git
-  revision: 054defd12915918809c2f6741eb9b3c137c186a3
+  revision: f86b66a427eca74a65b765734765666d0e8a7251
   branch: v4.0.x
   specs:
     shop_invader (0.1.0)
@@ -169,8 +169,8 @@ GEM
     autoprefixer-rails (8.0.0)
       execjs
     aws-eventstream (1.0.3)
-    aws-partitions (1.185.0)
-    aws-sdk-core (3.59.0)
+    aws-partitions (1.191.0)
+    aws-sdk-core (3.60.0)
       aws-eventstream (~> 1.0, >= 1.0.2)
       aws-partitions (~> 1.0)
       aws-sigv4 (~> 1.1)
@@ -190,7 +190,7 @@ GEM
       thread_safe (~> 0.3, >= 0.3.1)
     bazaar (0.0.2)
     bcrypt (3.1.13)
-    bindex (0.7.0)
+    bindex (0.8.1)
     bootstrap-kaminari-views (0.0.5)
       kaminari (>= 0.13)
       rails (>= 3.1)
@@ -288,7 +288,7 @@ GEM
       rails (>= 3.0)
     font-awesome-sass (5.2.0)
       sassc (>= 1.11)
-    fspath (3.1.1)
+    fspath (3.1.2)
     get_process_mem (0.2.4)
       ffi (~> 1.0)
     globalid (0.4.2)
@@ -320,8 +320,8 @@ GEM
     image_optim_pack (0.5.1)
       fspath (>= 2.1, < 4)
       image_optim (~> 0.19)
-    image_size (2.0.1)
-    in_threads (1.5.2)
+    image_size (2.0.2)
+    in_threads (1.5.3)
     io-like (0.3.0)
     jbuilder (2.9.1)
       activesupport (>= 4.2.0)
@@ -408,7 +408,7 @@ GEM
     orm_adapter (0.5.0)
     pony (1.13.1)
       mail (>= 2.0)
-    progress (3.5.1)
+    progress (3.5.2)
     public_suffix (3.1.1)
     puma (3.12.1)
     puma_worker_killer (0.1.1)
@@ -454,7 +454,7 @@ GEM
       method_source
       rake (>= 0.8.7)
       thor (>= 0.19.0, < 2.0)
-    rake (12.3.2)
+    rake (12.3.3)
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
