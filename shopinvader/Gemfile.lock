@@ -1,6 +1,7 @@
 GIT
   remote: https://github.com/locomotivecms/common.git
   revision: c2a1c48c326e947bca2c6f56dacda8a7c8f3930a
+  ref: c2a1c48c326e947bca2c6f56dacda8a7c8f3930a
   specs:
     locomotivecms_common (0.3.1)
       activesupport (>= 5.1.5, < 6.0)
@@ -11,6 +12,7 @@ GIT
 GIT
   remote: https://github.com/locomotivecms/custom_fields.git
   revision: 251b1b93472506f5eb255d60d92f65bcfc354095
+  ref: 251b1b93472506f5eb255d60d92f65bcfc354095
   specs:
     custom_fields (2.10.0.beta3)
       activesupport (>= 5.1, < 6.0)
@@ -22,6 +24,7 @@ GIT
 GIT
   remote: https://github.com/locomotivecms/engine.git
   revision: 65012fb1f4071b96f89cc50a80689ce3f7463332
+  ref: 65012fb1f4071b96f89cc50a80689ce3f7463332
   specs:
     locomotivecms (4.0.0.rc0)
       actionmailer-with-request (~> 0.5.0)
@@ -69,6 +72,7 @@ GIT
 GIT
   remote: https://github.com/locomotivecms/steam.git
   revision: 77fa10c6156da36c423065dcdb22c42e595b70df
+  ref: 77fa10c6156da36c423065dcdb22c42e595b70df
   specs:
     locomotivecms_steam (1.5.0.rc0)
       RedCloth (~> 4.3.2)
@@ -100,7 +104,7 @@ GIT
 
 GIT
   remote: https://github.com/shopinvader/locomotive-shopinvader.git
-  revision: f86b66a427eca74a65b765734765666d0e8a7251
+  revision: cef298fbce6cbaa29ae18f8d0f87a4a6491fb49d
   branch: v4.0.x
   specs:
     shop_invader (0.1.0)
@@ -169,17 +173,17 @@ GEM
     autoprefixer-rails (8.0.0)
       execjs
     aws-eventstream (1.0.3)
-    aws-partitions (1.191.0)
-    aws-sdk-core (3.60.0)
+    aws-partitions (1.195.0)
+    aws-sdk-core (3.61.2)
       aws-eventstream (~> 1.0, >= 1.0.2)
       aws-partitions (~> 1.0)
       aws-sigv4 (~> 1.1)
       jmespath (~> 1.0)
-    aws-sdk-kms (1.23.0)
-      aws-sdk-core (~> 3, >= 3.58.0)
+    aws-sdk-kms (1.24.0)
+      aws-sdk-core (~> 3, >= 3.61.1)
       aws-sigv4 (~> 1.1)
-    aws-sdk-s3 (1.45.0)
-      aws-sdk-core (~> 3, >= 3.58.0)
+    aws-sdk-s3 (1.46.0)
+      aws-sdk-core (~> 3, >= 3.61.1)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.1)
     aws-sigv4 (1.1.0)
@@ -480,7 +484,7 @@ GEM
     selenium-webdriver (3.142.3)
       childprocess (>= 0.5, < 2.0)
       rubyzip (~> 1.2, >= 1.2.2)
-    sentry-raven (2.9.0)
+    sentry-raven (2.11.0)
       faraday (>= 0.7.6, < 1.0)
     simple_form (4.0.1)
       actionpack (>= 5.0)
