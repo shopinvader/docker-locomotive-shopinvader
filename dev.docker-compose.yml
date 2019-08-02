@@ -1,9 +1,5 @@
 # This is the dev docker compose that I use with docky for dev purpose
 # Do not forget to create the mounted directory before
-networks:
-  default:
-    external:
-      name: dy
 services:
   db:
     image: mongo:3
@@ -12,8 +8,6 @@ services:
       - ./data/backup:/backup
   locomotive:
     environment:
-      - VIRTUAL_HOST=shopinvader-server.dy
-      - VIRTUAL_PORT=3000
       - RAILS_ENV=development
       - STORE_ASSET_IN_S3=false
       - DRAGON_FLY_SECRET=thisISaDEMOkeyNOTsecret
