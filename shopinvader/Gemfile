@@ -7,7 +7,7 @@ gem 'devise'
 gem 'locomotivecms_common', github: 'locomotivecms/common', ref: 'c2a1c48c326e947bca2c6f56dacda8a7c8f3930a'
 gem 'custom_fields', github: 'locomotivecms/custom_fields', ref: '251b1b93472506f5eb255d60d92f65bcfc354095'
 gem 'locomotivecms_steam', github: 'locomotivecms/steam', ref: '77fa10c6156da36c423065dcdb22c42e595b70df'
-gem 'locomotivecms', github: 'locomotivecms/engine', ref: '65012fb1f4071b96f89cc50a80689ce3f7463332'
+gem 'locomotivecms', github: 'acsone/engine', ref: '2c85b593c302e783038d79152fc536836c68e0a4'
 gem 'shop_invader', github: 'shopinvader/locomotive-shopinvader', branch: 'v4.0.x'
 gem 'mongo_session_store', '~> 3.1.0'
 
