@@ -1,6 +1,12 @@
-# This is an example of docker compose file that you can use
-# for testing shopinvader, enjoy it
-# Note do not forget to put a front (nginx, ha-proxy...) for ssl termination
+version: '3.5'
+
+# This is needed for making locomotive instance communicate w/ master odoo instance in dev mode
+# If you don't put odoo in the same composition, just add this shared network and an alias to the odoo one.
+# IMPORTANT: to make this work w/ `run --rm` you have to pass `--use-aliases`.
+networks:
+  shopinvader-shared-odoo-net:
+    name: shopinvader-shared-odoo-net
+
 services:
   db:
     image: mongo:3
@@ -20,4 +26,9 @@ services:
       - .loco-data/log:/usr/src/app/log:rw
       - .loco-data/public/sites:/usr/src/app/public/sites:rw
       - .loco-data/public/uploaded_assets:/usr/src/app/public/uploaded_assets:rw
-version: '3'
+    networks:
+      default:
+      shopinvader-shared-odoo-net:
+        aliases:
+          # reach locomotive w/ this alias (eg: from odoo or any other service)
+          - locomotive.local
