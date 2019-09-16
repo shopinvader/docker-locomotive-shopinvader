@@ -26,6 +26,13 @@ services:
       - .loco-data/log:/usr/src/app/log:rw
       - .loco-data/public/sites:/usr/src/app/public/sites:rw
       - .loco-data/public/uploaded_assets:/usr/src/app/public/uploaded_assets:rw
+    environment:
+      - RAILS_ENV=development
+      - DRAGON_FLY_SECRET=thisISaDEMOkeyNOTsecret
+      - SECRET_KEY_BASE=aDEMOkeyASwell
+      - LOCOMOTIVE_ENABLE_REGISTRATION=true
+      - LOCOMOTIVE_ADMIN_SSL_REDIRECT=false
+      - RAILS_SERVE_STATIC_FILES=true
     networks:
       default:
       shopinvader-shared-odoo-net:
