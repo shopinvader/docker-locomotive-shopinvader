@@ -4,11 +4,10 @@ This is the official container for shopinvader
 
 ## How to use this image
 
-Copy the file docker-compose.yml of this directory
-create the directy tmp, log, public/sites, public/uploaded_assets
-
-Run it with ```docker-compose up```. Locomotive is now available on http://localhost:3000
-
+1. copy the file `docker-compose.yml` of this directory in your project folder
+2. copy `.loco-data` folder to your project folder and add ignore its content in .gitignore
+3. Run it with ```docker-compose up```.
+4. Locomotive is now available on http://localhost:3000
 
 
 # Develop / Debug
@@ -70,7 +69,7 @@ You can generate one by running this command:
 $ doco run --rm locomotive rake secret
 ```
 
-As it's used to encode passwords, if you restore a DB locally you must config this otherwise you won't be able login. 
+As it's used to encode passwords, if you restore a DB locally you must config this otherwise you won't be able login.
 The other option is to reset the passwords for admin users.
 NOTE: website users are not the same as backend users.
 

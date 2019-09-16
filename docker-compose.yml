@@ -16,8 +16,8 @@ services:
     links:
       - db
     volumes:
-      - ./tmp:/usr/src/app/tmp
-      - ./log:/usr/src/app/log
-      - ./public/sites:/usr/src/app/public/sites
-      - ./public/uploaded_assets:/usr/src/app/public/uploaded_assets
+      - .loco-data/tmp:/usr/src/app/tmp:rw
+      - .loco-data/log:/usr/src/app/log:rw
+      - .loco-data/public/sites:/usr/src/app/public/sites:rw
+      - .loco-data/public/uploaded_assets:/usr/src/app/public/uploaded_assets:rw
 version: '3'
