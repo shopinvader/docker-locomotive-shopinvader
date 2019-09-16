@@ -13,9 +13,11 @@ Run it with ```docker-compose up```. Locomotive is now available on http://local
 
 # Develop / Debug
 
-If you are using amazon S3 for storing your asset you need to download them in dev mode
+## Static files served from AWS S3
 
-Before please install aws cli and read the documentation
+If you are using amazon S3 for storing your asset you need to download them in dev mode.
+
+Before please install aws cli and read the documentation.
 
 In short for installing aws and configuring the api key
 ```
@@ -26,33 +28,85 @@ aws configure
 Now let's synchronise the assets
 
 ```
-aws s3 sync s3://mybucket/sites public/sites
-aws s3 sync s3://mybucket/uploaded_assets public/uploaded_assets
+aws s3 sync s3://mybucket/sites .loco-data/public/sites
+aws s3 sync s3://mybucket/uploaded_assets .loco-data/public/uploaded_assets
 
 ```
 
-# TODO
-- add an environment example file with documentation
-- add an environment dev file
-- improve log managment (ready for kibana)
+# Available Environement Variables
 
-# Available Environnement Variables for settings:
+## Locomotive configuration
+
+### LOCOMOTIVE_ENABLE_REGISTRATION
+
+```
+LOCOMOTIVE_ENABLE_REGISTRATION=[true|false] (default: false)
+```
+Enables self registration on Locomotive admin backend.
+
+### LOCOMOTIVE_ADMIN_SSL_REDIRECT
+
+```
+LOCOMOTIVE_ADMIN_SSL_REDIRECT=[true|false] (default: true)
+```
+Force redirection of admin backend to HTTPS.
+
 
 ## RAILS configuration
+
+### RAILS_ENV
 ```
-RAILS_ENV
-SECRET_KEY_BASE
+RAILS_ENV=[production|development]
+```
+Tells RoR which kind of env your are working with.
 
-DEVISE_PEPPER (for more information : https://stackoverflow.com/questions/45988723/what-password-hashing-algorithm-does-devise-use and https://github.com/plataformatec/devise/blob/88724e10adaf9ffd1d8dbfbaadda2b9d40de756a/lib/devise/encryptor.rb)
-
-DRAGON_FLY_SECRET
-LOCOMOTIVE_ENABLE_REGISTRATION  (true or false)
-LOCOMOTIVE_ADMIN_SSL_REDIRECT   (true or false, default true)
-RAILS_SERVE_STATIC_FILES (true or false, default false)
-
+### SECRET_BASE
+```
+SECRET_KEY_BASE=6810991e8c119bdfe5f4dd[...]d88d1a5bcb69d6ed0cdc19892
+```
+This key is used to encrypt important data such as cookies and user passwords.
+You can generate one by running this command:
+```
+$ doco run --rm locomotive rake secret
 ```
 
-## MONGO configuration
+As it's used to encode passwords, if you restore a DB locally you must config this otherwise you won't be able login. 
+The other option is to reset the passwords for admin users.
+NOTE: website users are not the same as backend users.
+
+For more info https://medium.com/@michaeljcoyne/understanding-the-secret-key-base-in-ruby-on-rails-ce2f6f9968a1
+
+### DEVISE_PEPPER
+
+```
+DEVISE_PEPPER=myExtraSecret
+```
+This is "a string which is appended onto the password pre-hashing but not stored in the database (unlike salt, which is appended as well but stored with the password in the DB); and cost, a measure of how secure the hash should be (see the docs). Both of these are static and you can hard-code them into your non-Devise app (but make sure to keep pepper secret!)."
+
+For more information:
+
+* https://stackoverflow.com/questions/45988723/what-password-hashing-algorithm-does-devise-use
+* https://github.com/plataformatec/devise/blob/88724e10adaf9ffd1d8dbfbaadda2b9d40de756a/lib/devise/encryptor.rb
+
+
+### DRAGON_FLY_SECRET
+
+```
+DRAGON_FLY_SECRET=b75886dec470b846594[...]fe3e7a244b61242b6cec04
+```
+This key is used to encrypt important data such as cookies and user passwords.
+You can generate one by running this command:
+```
+$ doco run --rm locomotive rake secret
+```
+
+### RAILS_SERVE_STATIC_FILES
+
+```
+RAILS_SERVE_STATIC_FILES=[true|false] (default: false)
+```
+
+## MongoDB configuration
 
 MONGODB_URI
 MONGODB_MAX_POOL_SIZE (default: 5)
@@ -66,7 +120,6 @@ PUMA_WORKER
 PUMA_AUTH_TOKEN
 PUMA_MAX_RAM (default 4096Mo)
 ```
-
 
 ## Configuration for storing the asset in amazon S3
 
@@ -103,3 +156,6 @@ SENTRY_DSN
 ```
 rake db:mongoid:create_indexes
 ```
+
+# TODO
+- improve log managment (ready for kibana)
