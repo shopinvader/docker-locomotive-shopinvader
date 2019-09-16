@@ -32,6 +32,23 @@ aws s3 sync s3://mybucket/uploaded_assets .loco-data/public/uploaded_assets
 
 ```
 
+## Locomotive theme development
+
+The `docker-compose.yml` here provides a `wagon` container as well.
+`wagon` is the LocomotiveCMS service to deploy resources to a Locomotive site
+or to develop your own theme.
+
+To run it:
+
+```
+$ docker-compose run --service-ports wagon gosu ubuntu bash
+```
+From there you'll be able to run all wagon commands without having to install wagon by yourself.
+See https://doc.locomotivecms.com/docs (just skip wagon installation steps).
+
+NOTE: to make wagon work, the docker-compose file should stay inside your Locomotive theme folder.
+Otherwise you'll have to change the workspace volume.
+
 # Available Environement Variables
 
 ## Locomotive configuration

@@ -32,3 +32,15 @@ services:
         aliases:
           # reach locomotive w/ this alias (eg: from odoo or any other service)
           - locomotive.local
+  wagon:
+    image: quay.io/akretion/shopinvader-wagon:latest
+    ports:
+      - 3333:3333
+    volumes:
+      # NOTE: to make this work the do-co file should stay in the root of your shopinvader theme
+      - .:/workspace
+    networks:
+      default:
+      shopinvader-shared-odoo-net:
+        aliases:
+          - locomotive.wagon
