@@ -100,7 +100,7 @@ GIT
 
 GIT
   remote: https://github.com/shopinvader/locomotive-shopinvader.git
-  revision: dac53fe01691af795a17445bc369c36264031e93
+  revision: d09c76b1f834870a0a4ca0d0b92fec09a245ef3d
   branch: v4.0.x
   specs:
     shop_invader (0.1.0)
@@ -360,7 +360,7 @@ GEM
     locomotivecms-solid (4.0.1)
       locomotivecms-liquid (~> 4.0.0)
     logger (1.4.1)
-    loofah (2.2.3)
+    loofah (2.3.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
@@ -375,7 +375,7 @@ GEM
     mimetype-fu (0.1.2)
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
-    minitest (5.12.1)
+    minitest (5.12.2)
     moneta (1.0.0)
     monetize (1.9.2)
       money (~> 6.12)
