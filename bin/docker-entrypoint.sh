@@ -17,4 +17,7 @@ fi
 echo "Starting with UID : $USER_ID"
 id -u loco &> /dev/null || useradd --shell /bin/bash -u $USER_ID -o -c "" -m loco
 
+echo "Changing permissions on /usr/src/app/public with UID : $USER_ID"
+chown -R $USER_ID /usr/src/app
+
 exec "$@"
