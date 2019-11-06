@@ -148,6 +148,7 @@ S3_SECRET_KEY
 S3_BUCKET_REGION
 S3_ASSET_HOST_URL
 S3_CACHE_CONTROL
+S3_ENDPOINT (optionnal: usefull when using S3 compatible provider)
 ```
 
 ## SMTP configuration
