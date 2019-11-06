@@ -83,7 +83,7 @@ SECRET_KEY_BASE=6810991e8c119bdfe5f4dd[...]d88d1a5bcb69d6ed0cdc19892
 This key is used to encrypt important data such as cookies and user passwords.
 You can generate one by running this command:
 ```
-$ doco run --rm locomotive rake secret
+$ docker-compose run --rm locomotive rake secret
 ```
 
 As it's used to encode passwords, if you restore a DB locally you must config this otherwise you won't be able login.
@@ -110,10 +110,11 @@ For more information:
 ```
 DRAGON_FLY_SECRET=b75886dec470b846594[...]fe3e7a244b61242b6cec04
 ```
-This key is used to encrypt important data such as cookies and user passwords.
+This key is used to used to generate the protective SHA.
+See dragonfly configuration for more information: http://markevans.github.io/dragonfly/configuration
 You can generate one by running this command:
 ```
-$ doco run --rm locomotive rake secret
+$ docker-compose run --rm locomotive rake secret
 ```
 
 ### RAILS_SERVE_STATIC_FILES
@@ -147,6 +148,7 @@ S3_SECRET_KEY
 S3_BUCKET_REGION
 S3_ASSET_HOST_URL
 S3_CACHE_CONTROL
+S3_ENDPOINT (optionnal: usefull when using S3 compatible provider)
 ```
 
 ## SMTP configuration
