@@ -100,7 +100,7 @@ GIT
 
 GIT
   remote: https://github.com/shopinvader/locomotive-shopinvader.git
-  revision: d7cb7f14e9943699551e8eabd439e93c3d48c5e2
+  revision: e4c8b199aab71ed33e7db29560e394f972510087
   branch: v4.0.x
   specs:
     shop_invader (0.1.0)
@@ -170,8 +170,8 @@ GEM
     autoprefixer-rails (8.0.0)
       execjs
     aws-eventstream (1.0.3)
-    aws-partitions (1.233.0)
-    aws-sdk-core (3.74.0)
+    aws-partitions (1.237.0)
+    aws-sdk-core (3.76.0)
       aws-eventstream (~> 1.0, >= 1.0.2)
       aws-partitions (~> 1, >= 1.228.0)
       aws-sigv4 (~> 1.1)
