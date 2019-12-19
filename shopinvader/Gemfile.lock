@@ -416,7 +416,7 @@ GEM
       puma (>= 2.7, < 5)
     pundit (1.1.0)
       activesupport (>= 3.0.0)
-    rack (2.0.7)
+    rack (2.0.8)
     rack-accept (0.4.5)
       rack (>= 0.4)
     rack-cache (1.7.2)
