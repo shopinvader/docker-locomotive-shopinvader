@@ -6,7 +6,7 @@ gem 'devise'
 
 gem 'locomotivecms_common', github: 'locomotivecms/common'
 gem 'custom_fields', github: 'locomotivecms/custom_fields'
-gem 'locomotivecms_steam', github: 'akretion/steam', branch: 'better-attribute-parser'
+gem 'locomotivecms_steam', github: 'akretion/steam', branch: 'rebase-better-attribute-parser'
 gem 'locomotivecms', github: 'locomotivecms/engine'
 gem 'shop_invader', github: 'shopinvader/locomotive-shopinvader', branch: 'v4.0.x'
 gem 'mongo_session_store', '~> 3.1.0'
