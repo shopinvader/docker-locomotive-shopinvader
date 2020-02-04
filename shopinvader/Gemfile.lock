@@ -56,7 +56,8 @@ GIT
 
 GIT
   remote: https://github.com/locomotivecms/engine.git
-  revision: dcdd7375cc95112b1e63e1a19d3847437cd230be
+  revision: 61ed033e9daa9de3efe513a7a195c39e598de3e8
+  ref: 61ed033e9daa9de3efe513a7a195c39e598de3e8
   specs:
     locomotivecms (4.0.1)
       actionmailer-with-request (~> 0.5.0)
@@ -92,6 +93,7 @@ GIT
       multi_json (~> 1.13.1)
       origin (~> 2.3.1)
       pundit (~> 1.1.0)
+      rack (~> 2.0.8)
       rack-cache (~> 1.7.1)
       rails (>= 5.2.4.1, < 6.0)
       rails-html-sanitizer (~> 1.3.0)
@@ -296,7 +298,7 @@ GEM
     exifr (1.3.6)
     faraday (0.15.4)
       multipart-post (>= 1.2, < 3)
-    ffi (1.12.1)
+    ffi (1.12.2)
     flash_cookie_session (1.1.6)
       rails (>= 3.0)
     font-awesome-sass (5.2.0)
@@ -434,7 +436,7 @@ GEM
       puma (>= 2.7, < 5)
     pundit (1.1.0)
       activesupport (>= 3.0.0)
-    rack (2.1.2)
+    rack (2.0.8)
     rack-accept (0.4.5)
       rack (>= 0.4)
     rack-cache (1.7.2)
@@ -482,7 +484,7 @@ GEM
       railties (>= 4.2.0, < 6.0)
     ruby2_keywords (0.0.2)
     ruby_dep (1.5.0)
-    rubyzip (2.1.0)
+    rubyzip (2.2.0)
     sanitize (4.6.6)
       crass (~> 1.0.2)
       nokogiri (>= 1.4.4)
