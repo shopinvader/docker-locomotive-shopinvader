@@ -1,3 +1,7 @@
+## v4.0.x-20200207
+
+ * fix dynamic rendering of esi_include by updating shopinvader gems
+
 ## v4.0.x-20200206
 
  * fix rendering of esi_include by updating shopinvader gems
