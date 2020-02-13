@@ -1,3 +1,7 @@
+## v4.0.X-20200213
+
+ * fix issue with params in erp tag by updating shopinvader gems
+
 ## v4.0.x-20200207
 
  * fix dynamic rendering of esi_include by updating shopinvader gems
