@@ -1,3 +1,7 @@
+## v4.0.X.20200508
+
+ * fix security issue, params where visible in log, remove them
+
 ## v4.0.X-20200213
 
  * fix issue with params in erp tag by updating shopinvader gems
