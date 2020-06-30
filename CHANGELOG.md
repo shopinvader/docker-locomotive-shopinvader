@@ -8,8 +8,7 @@
   erp:
     api_required_recaptcha: >
       [{ "method": "POST", "actions": ["lead", "lead/create"]}]
-``
-
+```
 
 ## v4.0.X.20200508
 
