@@ -1,3 +1,16 @@
+## v4.0.x-20200630
+
+ * Update dependency
+ * Add the recaptcha support on api endpoint of odoo
+   in the erp metafields you need to add the field api_required_recaptcha
+
+```
+  erp:
+    api_required_recaptcha: >
+      [{ "method": "POST", "actions": ["lead", "lead/create"]}]
+``
+
+
 ## v4.0.X.20200508
 
  * fix security issue, params where visible in log, remove them
