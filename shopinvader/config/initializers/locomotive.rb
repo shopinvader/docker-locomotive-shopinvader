@@ -19,13 +19,13 @@ Locomotive.configure do |config|
   config.default_locale = :en
 
   # locales allowed for the back-office UI
-  config.locales = [:en, :fr, :de, :"zh-CN", :cs, :el, :lt, :"pt-BR", :nl, :ru]
+  config.locales = [:en, :fr, :de, :"zh-CN", :cs, :el, :lt, :"pt-BR", :nl, :ru, :it]
 
   # available locales suggested to "localize" a site. You will have to pick up at least one among that list.
   # config.site_locales = %w{en de fr pl pt pt-BR it nl nb es ru ja cs bg sk uk}
   # sadly mongodb have index limitation we need to restrict the index used here
   # TODO we should make it configurable and take the time to document this limitation
-  config.site_locales = %w{en de fr es pt}
+  config.site_locales = %w{en de fr es pt it}
 
   # tell if logs are enabled. Useful for debug purpose.
   config.enable_logs = true
