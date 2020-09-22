@@ -25,7 +25,7 @@ Locomotive.configure do |config|
   # config.site_locales = %w{en de fr pl pt pt-BR it nl nb es ru ja cs bg sk uk}
   # sadly mongodb have index limitation we need to restrict the index used here
   # TODO we should make it configurable and take the time to document this limitation
-  config.site_locales = %w{en de fr es pt it}
+  config.site_locales = %w{en de fr es pt it nl}
 
   # tell if logs are enabled. Useful for debug purpose.
   config.enable_logs = true

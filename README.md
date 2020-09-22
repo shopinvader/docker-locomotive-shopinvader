@@ -170,10 +170,23 @@ SMTP_AUTHENTICATION (default plain)
 SENTRY_DSN
 ```
 
-## Index generation
+## Rake task
+
+Locomotive include several maintance task based on rake
+
+You can list all of them using
+
+```
+rake -T
+
+```
+
+### Index generation
 ```
 rake db:mongoid:create_indexes
 ```
 
+
 # TODO
+- improve configuration of allowed lang in front and limitation of indexing with mongodb
 - improve log managment (ready for kibana)
