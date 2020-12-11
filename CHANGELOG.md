@@ -1,3 +1,7 @@
+## v4.0.x-20201211
+
+ * Update shopinvader lib to solve with_scope in operator with algolia
+
 ## v4.0.x-20200630
 
  * Update dependency
