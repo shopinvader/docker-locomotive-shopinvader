@@ -149,6 +149,7 @@ S3_BUCKET_REGION
 S3_ASSET_HOST_URL
 S3_CACHE_CONTROL
 S3_ENDPOINT (optionnal: usefull when using S3 compatible provider)
+S3_PATH_STYLE (optionnal: required by some S3 compatible provider like Minio)
 ```
 
 ## SMTP configuration
