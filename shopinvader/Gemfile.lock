@@ -55,10 +55,11 @@ GIT
       mongoid (>= 6.2, < 7.0)
 
 GIT
-  remote: https://github.com/locomotivecms/engine.git
-  revision: bb2a3a3fa24adf4e953d2f96f8419eb032fadb16
+  remote: https://github.com/vrenaville/engine.git
+  revision: 8b93b4e1a63c715c89a030211064edbd2cbdd34d
+  branch: fix_path_style
   specs:
-    locomotivecms (4.0.3)
+    locomotivecms (4.1.0.rc1)
       actionmailer-with-request (~> 0.5.0)
       adomain (~> 0.1.1)
       autoprefixer-rails (~> 8.0.0)

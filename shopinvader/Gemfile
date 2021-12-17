@@ -7,7 +7,7 @@ gem 'devise'
 gem 'locomotivecms_common', github: 'locomotivecms/common'
 gem 'custom_fields', github: 'locomotivecms/custom_fields'
 gem 'locomotivecms_steam', github: 'akretion/steam', branch: 'all-fixes'
-gem 'locomotivecms', github: 'locomotivecms/engine'
+gem 'locomotivecms', github: 'vrenaville/engine', branch: 'fix_path_style'
 
 gem 'shop_invader', github: 'shopinvader/locomotive-shopinvader', branch: 'v4.0.x'
 gem 'mongo_session_store', '~> 3.1.0'
