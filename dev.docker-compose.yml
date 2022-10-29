@@ -12,7 +12,7 @@ services:
       - STORE_ASSET_IN_S3=false
       - DRAGON_FLY_SECRET=thisISaDEMOkeyNOTsecret
       - LOCOMOTIVE_ENABLE_REGISTRATION=true
-    image: quay.io/akretion/docky-ruby:latest
+    image: ghcr.io/akretion/docky-ruby:latest
     links:
       - db
     volumes:

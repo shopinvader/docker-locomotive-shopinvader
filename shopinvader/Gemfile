@@ -4,29 +4,29 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 gem 'mongoid'
 gem 'devise'
 
-gem 'locomotivecms_common', github: 'locomotivecms/common'
-gem 'custom_fields', github: 'locomotivecms/custom_fields'
-gem 'locomotivecms_steam', github: 'akretion/steam', branch: 'all-fixes'
-gem 'locomotivecms', github: 'locomotivecms/engine'
+gem 'locomotivecms_common'
+gem 'custom_fields'
+gem 'locomotivecms_steam', '=1.6.0'
+gem 'locomotivecms'
 
 gem 'shop_invader', github: 'shopinvader/locomotive-shopinvader', branch: 'v4.0.x'
 gem 'mongo_session_store', '~> 3.1.0'
 
 # TODO FIXME needed to precompile asset in docker
-gem 'listen', '>= 3.0.5', '< 3.2'
-gem 'nokogiri', '>= 1.10.3'
-
+#gem 'listen', '>= 3.0.5', '< 3.2'
+#gem 'nokogiri', '>= 1.10.3'
+#
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.2'
+gem 'rails', '~> 5.2.3'
 # Use Puma as the app server
-gem 'puma', '~> 3.12'
+gem 'puma', '~> 5.1.0'
 gem 'puma_worker_killer'
 # gem 'passenger-rails'
 gem 'rack-cors', require: 'rack/cors'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
+gem 'uglifier', '>= 4.1.20'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 
