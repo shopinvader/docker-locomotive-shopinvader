@@ -1,12 +1,13 @@
 GIT
   remote: https://github.com/shopinvader/locomotive-shopinvader.git
-  revision: 8426c8119ffc6695b9227fbe44aa5361b8435e8a
+  revision: dec35a05ae67a180b6b0d7d59327f5178fee3446
   branch: v4.0.x
   specs:
     shop_invader (0.1.0)
       algoliasearch (~> 1.13.0)
       elasticsearch (~> 6.2.0)
       faraday (~> 0.15.2)
+      rack-utm (~> 0.0.2)
 
 GEM
   remote: https://rubygems.org/
@@ -79,8 +80,8 @@ GEM
     autoprefixer-rails (8.0.0)
       execjs
     aws-eventstream (1.2.0)
-    aws-partitions (1.651.0)
-    aws-sdk-core (3.165.1)
+    aws-partitions (1.653.0)
+    aws-sdk-core (3.166.0)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.651.0)
       aws-sigv4 (~> 1.5)
@@ -88,7 +89,7 @@ GEM
     aws-sdk-kms (1.59.0)
       aws-sdk-core (~> 3, >= 3.165.0)
       aws-sigv4 (~> 1.1)
-    aws-sdk-s3 (1.117.0)
+    aws-sdk-s3 (1.117.1)
       aws-sdk-core (~> 3, >= 3.165.0)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.4)
@@ -446,6 +447,8 @@ GEM
     rack-rewrite (1.5.1)
     rack-test (2.0.2)
       rack (>= 1.3)
+    rack-utm (0.0.2)
+      rack
     rack_csrf (2.6.0)
       rack (>= 1.1.0)
     rails (5.2.8.1)
@@ -562,7 +565,7 @@ GEM
     xpath (3.2.0)
       nokogiri (~> 1.8)
     yajl-ruby (1.3.1)
-    zeitwerk (2.6.1)
+    zeitwerk (2.6.2)
 
 PLATFORMS
   ruby
