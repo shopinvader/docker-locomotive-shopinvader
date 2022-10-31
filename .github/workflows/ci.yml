@@ -25,7 +25,7 @@ jobs:
           file: Dockerfile
           tags: |
             ghcr.io/${{ github.repository }}:latest,
-            ghcr.io/${{ github.repository }}:${{ GITHUB_REF_NAME }}
+            ghcr.io/${{ github.repository }}:${{ github.ref_name }}
           cache-from: type=registry,ref=ghcr.io/${{ github.repository }}:latest
           cache-to: type=inline
           push: true
