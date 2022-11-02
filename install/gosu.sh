@@ -1,5 +1,5 @@
 #!/bin/bash
-set -eo pipefail
+set -euxo pipefail
 
 # copy from https://raw.githubusercontent.com/camptocamp/docker-odoo-project/master/install/gosu.sh
 
