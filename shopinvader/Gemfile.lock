@@ -438,7 +438,7 @@ GEM
     procto (0.0.3)
     progress (3.6.0)
     public_suffix (5.0.0)
-    puma (5.1.1)
+    puma (5.6.4)
       nio4r (~> 2.0)
     puma_worker_killer (0.3.1)
       get_process_mem (~> 0.2)
@@ -594,7 +594,7 @@ DEPENDENCIES
   locomotivecms_steam (= 1.6.0)
   mongo_session_store (~> 3.1.0)
   mongoid
-  puma (~> 5.1.0)
+  puma (~> 5.6.4)
   puma_worker_killer
   rack-cors
   rails (~> 5.2.3)
