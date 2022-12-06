@@ -15,7 +15,9 @@ gem 'mongo_session_store', '~> 3.1.0'
 # TODO FIXME needed to precompile asset in docker
 #gem 'listen', '>= 3.0.5', '< 3.2'
 #gem 'nokogiri', '>= 1.10.3'
-#
+
+gem 'aws-sdk-s3', '= 1.81.0'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
 # Use Puma as the app server
