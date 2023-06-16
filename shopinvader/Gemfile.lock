@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/shopinvader/locomotive-shopinvader.git
-  revision: 6bfb1e793f2c5635f7b9d38879f98f31eb13d434
+  revision: 5ed2075c7ba588ab20c03e9fcd6a80c771190687
   branch: v4.0.x
   specs:
     shop_invader (0.1.0)
@@ -81,14 +81,14 @@ GEM
     autoprefixer-rails (8.0.0)
       execjs
     aws-eventstream (1.2.0)
-    aws-partitions (1.763.0)
-    aws-sdk-core (3.172.0)
+    aws-partitions (1.780.0)
+    aws-sdk-core (3.175.0)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.651.0)
       aws-sigv4 (~> 1.5)
       jmespath (~> 1, >= 1.6.1)
-    aws-sdk-kms (1.64.0)
-      aws-sdk-core (~> 3, >= 3.165.0)
+    aws-sdk-kms (1.67.0)
+      aws-sdk-core (~> 3, >= 3.174.0)
       aws-sigv4 (~> 1.1)
     aws-sdk-s3 (1.81.0)
       aws-sdk-core (~> 3, >= 3.104.3)
@@ -207,7 +207,7 @@ GEM
     equalizer (0.0.11)
     erubi (1.12.0)
     execjs (2.8.1)
-    exifr (1.3.10)
+    exifr (1.4.0)
     faraday (0.17.6)
       multipart-post (>= 1.2, < 3)
     ffi (1.15.5)
@@ -235,7 +235,7 @@ GEM
       mime-types (~> 3.0)
       multi_xml (>= 0.5.2)
     httpclient (2.8.3)
-    i18n (1.13.0)
+    i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     ice_nine (0.11.2)
     image_optim (0.26.3)
@@ -364,7 +364,7 @@ GEM
       uglifier (~> 4.1.3)
       unparser (~> 0.4)
     logger (1.5.3)
-    loofah (2.21.2)
+    loofah (2.21.3)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
     mail (2.8.1)
@@ -416,7 +416,7 @@ GEM
       ruby2_keywords (~> 0.0.1)
     mustermann-grape (1.0.2)
       mustermann (>= 1.0.0)
-    net-imap (0.3.4)
+    net-imap (0.3.6)
       date
       net-protocol
     net-pop (0.1.2)
@@ -447,7 +447,7 @@ GEM
       puma (>= 2.7)
     pundit (1.1.0)
       activesupport (>= 3.0.0)
-    racc (1.6.2)
+    racc (1.7.1)
     rack (2.1.4.3)
     rack-accept (0.4.5)
       rack (>= 0.4)
