@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/shopinvader/locomotive-shopinvader.git
-  revision: 5ed2075c7ba588ab20c03e9fcd6a80c771190687
+  revision: bdae530cde580ec6cb425a6e55d87290dbe9a269
   branch: v4.0.x
   specs:
     shop_invader (0.1.0)
