@@ -18,7 +18,7 @@ environment ENV.fetch("RAILS_ENV") { "development" }
 before_fork do
   require 'puma_worker_killer'
   PumaWorkerKiller.config do |config|
-    config.ram        = ENV['PUMA_MAX_RAM'] || 4096
+    config.ram        = Integer(ENV['PUMA_MAX_RAM'] || 4096)
     config.frequency  = 60
     config.rolling_restart_frequency = 12 * 3600
   end
