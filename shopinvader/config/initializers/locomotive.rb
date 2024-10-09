@@ -1,8 +1,9 @@
 Locomotive.configure do |config|
 
   # enable it if you want Locomotive to render the site of the Rails application embedding the engine
-  # TODO see if needed
-  # config.host = 'mylocomotiveapp.com'
+  #if Rails.env.production?
+  #  config.host = 'beta.locomotive.works'
+  #end
 
   # list of forbidden handles for a site because there are in conflicts with internal resources.
   # config.reserved_site_handles = %w(sites my_account password sign_in sign_out)
@@ -27,8 +28,13 @@ Locomotive.configure do |config|
   # TODO we should make it configurable and take the time to document this limitation
   config.site_locales = %w{en de fr es pt it nl}
 
-  # tell if logs are enabled. Useful for debug purpose.
+  # tell if logs of the Engine (back-office) are enabled. Useful for debug purpose.
   config.enable_logs = true
+
+  # setup the logger for Steam (rendering)
+  # config.steam_log_file = ENV['LOCOMOTIVE_STEAM_LOG'] || Rails.root.join('log', 'steam.log')
+  config.steam_log_level = ::Logger::INFO
+  # config.steam_log_level = ::Logger::INFO
 
   # the API authentication requires to developer to pass 2 params in the header
   # of the request: X-Locomotive-Account-Email and X-Locomotive-Token.
@@ -65,7 +71,7 @@ Locomotive.configure do |config|
   # Note: by default, rack/cache is disabled in the Heroku platform
 
   # Dragonfly within Steam uses it to generate the protective SHA
-  # config.steam_image_resizer_secret = 'please change it'
+  config.steam_image_resizer_secret = ENV['DRAGONFLY_SECRET_KEY']
 
   # Indicate whether you want to allow users to register with the site. If set
   # to false the registration page will not be shown. (Default: true)

@@ -1,3 +1,7 @@
+# Images are transformed by the Heroku app leading to bigger memory + cpu consumption
+# This is why it's a good practice to use another Ruby app to handle the transformations
+TRANSFORMED_IMAGES_SERVICE_URL = ENV['DRAGONFLYAPP_HOST'] || ENV['DRAGONFLYAPP_URL'] || Rails.application.config.action_controller.asset_host
+
 # Configure
 Dragonfly.app(:engine).configure do
   plugin :imagemagick,
@@ -6,9 +10,13 @@ Dragonfly.app(:engine).configure do
 
   processor :thumb, Locomotive::Dragonfly::Processors::SmartThumb.new
 
-  verify_urls true
+  if Rails.env.production?
+    verify_urls true
 
-  secret ENV['DRAGON_FLY_SECRET']
+    secret ENV['DRAGONFLY_SECRET_KEY']
+  else
+    verify_urls false
+  end
 
   url_format '/images/dynamic/:job/:sha/:basename.:ext'
 
@@ -16,14 +24,15 @@ Dragonfly.app(:engine).configure do
 
   fetch_url_whitelist /.+/
 
+  # we don't care if this is the Heroku app converting the image
   url_host (case Rails.env.to_sym
-  when :production then Rails.application.config.action_controller.asset_host
+  when :production then TRANSFORMED_IMAGES_SERVICE_URL
   else nil; end)
 end
 
 Dragonfly.app(:steam).configure do
   url_host (case Rails.env.to_sym
-  when :production  then Rails.application.config.action_controller.asset_host
+  when :production then TRANSFORMED_IMAGES_SERVICE_URL
   else nil; end)
 end
 
