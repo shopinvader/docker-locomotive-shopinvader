@@ -141,7 +141,6 @@ PUMA_MAX_RAM (default 4096Mo)
 ## Configuration for storing the asset in amazon S3
 
 ```
-STORE_ASSET_IN_S3  (true or false)
 S3_BUCKET
 S3_KEY_ID
 S3_SECRET_KEY
