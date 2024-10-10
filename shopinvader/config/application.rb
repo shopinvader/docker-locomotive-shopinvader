@@ -1,17 +1,14 @@
-require_relative 'boot'
+require_relative "boot"
 
 require "rails"
 # Pick the frameworks you want:
 require "active_model/railtie"
 require "active_job/railtie"
-# require "active_record/railtie"
-# require "active_storage/engine"
 require "action_controller/railtie"
 require "action_mailer/railtie"
 require "action_view/railtie"
 require "action_cable/engine"
 require "sprockets/railtie"
-require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -20,20 +17,15 @@ Bundler.require(*Rails.groups)
 module Shopinvader
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 5.1
+    config.load_defaults 7.1
     config.mongoid.logger.level = Logger::INFO
     config.logger = Logger.new(STDOUT)
 
-    # Settings in config/environments/* take precedence over those specified here.
-    # Application configuration can go into files in config/initializers
-    # -- all .rb files in that directory are automatically loaded after loading
-    # the framework and any gems in your application.
-
-    config.assets.initialize_on_precomplie = false
+    config.autoload_paths << Rails.root.join('lib')
 
     config.x.locomotive_search_backend = :algolia
 
-    config.middleware.insert_before ActionDispatch::Static, Rack::Cors do
+    config.middleware.insert_before 0, Rack::Cors do
       allow do
         origins '*'
         resource '/assets/*', headers: :any, methods: :any
@@ -49,5 +41,11 @@ module Shopinvader
       end
     end
 
+    config.hosts << ->(host) {
+      permitted_domains = Rails.cache.fetch('locomotive-domains', expires_in: 2.minute) do
+        Locomotive::Site.pluck(:domains).flatten
+      end
+      permitted_domains.include?(host)
+    }
   end
 end
