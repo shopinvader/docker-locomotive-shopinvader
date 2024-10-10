@@ -32,13 +32,14 @@ module Shopinvader
       end
     end
 
-    # Steam
-    # initializer 'station.steam', after: 'steam' do |app|
-    #   require 'locomotive/steam/middlewares/papertrail'
-    #   Locomotive::Steam.configure do |config|
-    #     config.middleware.insert_before Locomotive::Steam::Middlewares::Site, Locomotive::Steam::Middlewares::Papertrail
-    #   end
-    # end
+    initializer 'station.steam', after: 'steam' do |app|
+      Locomotive::Steam.configure do |config|
+        ShopInvader.setup
+      end
+      Locomotive::Common.configure do |config|
+        config.notifier = Locomotive::Common::Logger.setup(nil)
+      end
+    end
 
     config.hosts << ->(host) {
       permitted_domains = Rails.cache.fetch('locomotive-domains', expires_in: 2.minute) do

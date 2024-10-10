@@ -34,7 +34,6 @@ Locomotive.configure do |config|
   # setup the logger for Steam (rendering)
   # config.steam_log_file = ENV['LOCOMOTIVE_STEAM_LOG'] || Rails.root.join('log', 'steam.log')
   config.steam_log_level = ::Logger::INFO
-  # config.steam_log_level = ::Logger::INFO
 
   # the API authentication requires to developer to pass 2 params in the header
   # of the request: X-Locomotive-Account-Email and X-Locomotive-Token.
@@ -71,7 +70,7 @@ Locomotive.configure do |config|
   # Note: by default, rack/cache is disabled in the Heroku platform
 
   # Dragonfly within Steam uses it to generate the protective SHA
-  config.steam_image_resizer_secret = ENV['DRAGONFLY_SECRET_KEY']
+  config.steam_image_resizer_secret = ENV['DRAGON_FLY_SECRET']
 
   # Indicate whether you want to allow users to register with the site. If set
   # to false the registration page will not be shown. (Default: true)

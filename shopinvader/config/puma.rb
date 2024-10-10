@@ -21,15 +21,6 @@ port ENV.fetch("PORT") { 3000 }
 #
 environment ENV.fetch("RAILS_ENV") { "development" }
 
-before_fork do
-  require 'puma_worker_killer'
-  PumaWorkerKiller.config do |config|
-    config.ram        = Integer(ENV['PUMA_MAX_RAM'] || 4096)
-    config.frequency  = 60
-    config.rolling_restart_frequency = 12 * 3600
-  end
-  PumaWorkerKiller.start
-end
 
 # Specifies the `pidfile` that Puma will use.
 pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }
@@ -48,13 +39,20 @@ workers ENV.fetch("PUMA_WORKERS") { 2 }
 # before forking the application. This takes advantage of Copy On Write
 # process behavior so workers use less memory.
 #
-# preload_app!
+preload_app!
 
-# increase worker timeout in development mode
-if ENV['RAILS_ENV'] == 'development'
-  puts "LOGGER: development => worker_timeout 3600"
-  worker_timeout 3600
+if ENV.fetch("RAILS_ENV") == "production"
+    before_fork do
+      require 'puma_worker_killer'
+      PumaWorkerKiller.config do |config|
+        config.ram        = Integer(ENV['PUMA_MAX_RAM'] || 4096)
+        config.frequency  = 60
+        config.rolling_restart_frequency = 12 * 3600
+      end
+      PumaWorkerKiller.start
+  end
 end
+
 
 # expose PUMA control app if auth token
 if ENV['PUMA_AUTH_TOKEN']

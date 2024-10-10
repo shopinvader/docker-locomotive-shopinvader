@@ -13,7 +13,7 @@ Dragonfly.app(:engine).configure do
   if Rails.env.production?
     verify_urls true
 
-    secret ENV['DRAGONFLY_SECRET_KEY']
+    secret ENV['DRAGON_FLY_SECRET']
   else
     verify_urls false
   end

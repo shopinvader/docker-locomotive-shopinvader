@@ -97,5 +97,4 @@ Rails.application.configure do
   end
 
   config.hosts << ENV["LOCOMOTIVE_BACKOFFICE_DOMAIN"]
-
 end

@@ -10,10 +10,6 @@ gem 'devise'
 gem 'carrierwave-aws'
 gem 'mimemagic', '~> 0.4.3'
 
-# Shopinvader specific
-gem 'puma_worker_killer'
-gem 'shop_invader', github: 'shopinvader/locomotive-shopinvader', branch: 'v4.0.x'
-
 # gem 'pry'
 # gem 'custom_fields', path: '../../custom_fields' # for Developers
 # gem 'locomotivecms_common', path: '../../common', require: false
