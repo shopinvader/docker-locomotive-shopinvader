@@ -23,7 +23,7 @@ jobs:
       - name: Build image
         uses: docker/build-push-action@v2
         with:
-          context: .
+          context: shopinvader
           file: Dockerfile
           tags: |
             ghcr.io/${{ github.repository }}:latest,
