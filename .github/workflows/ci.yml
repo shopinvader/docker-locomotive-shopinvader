@@ -24,7 +24,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: shopinvader
-          file: Dockerfile
+          file: shopinvader/Dockerfile
           tags: |
             ghcr.io/${{ github.repository }}:latest,
             ghcr.io/${{ github.repository }}:${{ github.ref_name }}
