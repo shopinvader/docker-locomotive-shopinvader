@@ -186,6 +186,15 @@ rake -T
 rake db:mongoid:create_indexes
 ```
 
+### Purge old session
+
+In mongo db sheeh you can purge the old session using (TODO we should do a rake task)
+
+```
+db.getCollection("sessions").deleteMany({"updated_at": {$lt:ISODate("2023-12-06")}})
+```
+
+
 
 # TODO
 - improve configuration of allowed lang in front and limitation of indexing with mongodb
