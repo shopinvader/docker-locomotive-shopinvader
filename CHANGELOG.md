@@ -1,14 +1,14 @@
-## v4.0.x-20241010
+## v4.0.x-20241015
 
  * Big update the project, use native steam version (not a fork anymore)
  * Broken deprecated old syntax have been removed
     see: https://github.com/shopinvader/locomotive-shopinvader/commit/335f3cdcba192989af65d7b5056a6376e055ec07
  * Following Variable have changed
    - STORE_ASSET_IN_S3 not needed anymore (duplicated information), just configure your bucket and it will use it
-   - LOCOMOTIVE_BACKOFFICE_DOMAIN => you can add here the main domain of you engine
- * Note, as rails have been updated, now the domain that locomotive respond is filtered on the list of domain
-   that exist in the database and a cache of 2 minute exists so when you add a new site, please wait 2 minutes max
-   see here: https://github.com/shopinvader/docker-locomotive-shopinvader/blob/70dc0b2dec31d767904690c1eb0752dd172e1865/shopinvader/config/application.rb#L44
+ * Rails 7 filter the domain available
+   - the domain that locomotive respond is filtered on the list of domain that exist in the database and a cache of 2 minute exists so when you add a new site, please wait 2 minutes max
+     see here: https://github.com/shopinvader/docker-locomotive-shopinvader/blob/70dc0b2dec31d767904690c1eb0752dd172e1865/shopinvader/config/application.rb#L44
+   - ALLOWED_DOMAIN => you can add here additionnal domain that you want to allow
 
 
 ## v4.0.x-20201211

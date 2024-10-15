@@ -53,6 +53,15 @@ Otherwise you'll have to change the workspace volume.
 
 ## Locomotive configuration
 
+### ALLOWED_HOSTS
+
+If you want to reach the server with a domain that is not in the list of existing website on your locomotive
+you can allow specific domain like this:
+
+```
+ALLOWED_HOSTS=foo1.exemple.org,10.10.10.82:3000,localhost:3000
+```
+
 ### LOCOMOTIVE_ENABLE_REGISTRATION
 
 ```

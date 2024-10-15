@@ -96,5 +96,8 @@ Rails.application.configure do
     config.logger    = ActiveSupport::TaggedLogging.new(logger)
   end
 
-  config.hosts << ENV["LOCOMOTIVE_BACKOFFICE_DOMAIN"]
+  if ENV["ALLOWED_HOSTS"].present?
+    config.hosts += ENV["ALLOWED_HOSTS"].split(",")
+  end
+
 end
