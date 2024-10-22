@@ -100,4 +100,9 @@ Rails.application.configure do
     config.hosts += ENV["ALLOWED_HOSTS"].split(",")
   end
 
+  allowed_hosts_regex = ENV.fetch('ALLOWED_HOSTS_REGEX', '').split(',')
+  allowed_hosts_regex.each do |regex|
+    config.hosts << Regexp.new(regex.strip)
+  end
+
 end

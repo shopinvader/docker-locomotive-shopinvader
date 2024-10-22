@@ -1,3 +1,6 @@
+##
+ * add regex support for domain
+
 ## v4.0.x-20241015
 
  * Big update the project, use native steam version (not a fork anymore)

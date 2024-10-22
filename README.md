@@ -62,6 +62,14 @@ you can allow specific domain like this:
 ALLOWED_HOSTS=foo1.exemple.org,10.10.10.82:3000,localhost:3000
 ```
 
+You can also add regex
+
+```
+ALLOWED_HOSTS_REGEX=/10\.0\.[012]\.\d+/
+```
+
+
+
 ### LOCOMOTIVE_ENABLE_REGISTRATION
 
 ```
