@@ -84,6 +84,13 @@ LOCOMOTIVE_ADMIN_SSL_REDIRECT=[true|false] (default: true)
 ```
 Force redirection of admin backend to HTTPS.
 
+### LOCOMOTIVE_SITE_ALLOWED_LOCALES
+
+LOCOMOTIVE_SITE_ALLOWED_LOCALES="fr,ca,es"
+
+Note: be carefull if you add too many lang (more than 7) you can reach some index limitation on mongodb
+
+If not defined then allowed lang are the following: "en,de,fr,es,pt,it,nl"
 
 ## RAILS configuration
 
