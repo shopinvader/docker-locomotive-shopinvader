@@ -10,6 +10,8 @@ gem 'devise'
 gem 'carrierwave-aws'
 gem 'mimemagic', '~> 0.4.3'
 
+gem 'ostruct'
+
 # gem 'pry'
 # gem 'custom_fields', path: '../../custom_fields' # for Developers
 # gem 'locomotivecms_common', path: '../../common', require: false
@@ -19,11 +21,11 @@ gem 'mimemagic', '~> 0.4.3'
 
 # gem 'locomotivecms_search', path: '../../search'
 
-gem 'locomotivecms', github: 'locomotivecms/engine', ref: '417d4a8'
+gem 'locomotivecms', github: 'locomotivecms/engine', branch: 'fix-no-locale-fallbacks-issue'
 gem 'locomotivecms_steam', github: 'locomotivecms/steam', ref: 'ba10b57b', require: false
 gem 'locomotivecms_common', github: 'locomotivecms/common', ref: 'c78da158', require: false
 # gem 'locomotivecms_search', github: 'locomotivecms/search', ref: '35e5813'
-gem 'custom_fields', github: 'locomotivecms/custom_fields', ref: '87bf1b', require: false
+gem 'custom_fields', github: 'locomotivecms/custom_fields', ref: '85e9c1a', require: false
 
 
 # Shopinvader specific
