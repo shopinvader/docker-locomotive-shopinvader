@@ -102,8 +102,8 @@ GIT
 
 GIT
   remote: https://github.com/shopinvader/locomotive-shopinvader.git
-  revision: effff0501d5d6582f9d096aba837019e1e621147
-  branch: v4.0.x
+  revision: 198306c3942ea29fa725c8a69e71e2be31204f32
+  branch: v4.0.x-fix-erp-parse-response
   specs:
     shop_invader (0.1.0)
       algoliasearch (~> 1.13.0)
