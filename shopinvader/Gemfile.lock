@@ -527,7 +527,7 @@ GEM
     responders (3.1.1)
       actionpack (>= 5.2)
       railties (>= 5.2)
-    rexml (3.3.8)
+    rexml (3.3.9)
     ruby2_keywords (0.0.5)
     sanitize (6.0.2)
       crass (~> 1.0.2)
