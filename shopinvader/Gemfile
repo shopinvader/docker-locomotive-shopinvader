@@ -29,7 +29,7 @@ gem 'custom_fields', github: 'locomotivecms/custom_fields', ref: '85e9c1a', requ
 
 
 # Shopinvader specific
-gem 'shop_invader', github: 'shopinvader/locomotive-shopinvader', branch: 'v4.0.x'
+gem 'shop_invader', github: 'shopinvader/locomotive-shopinvader', branch: 'v4.0.x-fix-erp-parse-response'
 gem 'mongo_session_store', '~> 3.2.1'
 gem 'puma_worker_killer'
 
