@@ -28,7 +28,7 @@ gem 'locomotivecms_common', github: 'locomotivecms/common', ref: 'c78da158', req
 gem 'custom_fields', github: 'locomotivecms/custom_fields', ref: '85e9c1a', require: false
 
 
-# Shopinvader specific
+# Shopinvader specific + fix for response parse https://github.com/shopinvader/locomotive-shopinvader/pull/92
 gem 'shop_invader', github: 'shopinvader/locomotive-shopinvader', branch: 'v4.0.x-fix-erp-parse-response'
 gem 'mongo_session_store', '~> 3.2.1'
 gem 'puma_worker_killer'
