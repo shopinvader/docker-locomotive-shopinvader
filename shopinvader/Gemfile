@@ -21,9 +21,9 @@ gem 'ostruct'
 
 # gem 'locomotivecms_search', path: '../../search'
 
-gem 'locomotivecms', github: 'locomotivecms/engine', branch: 'fix-no-locale-fallbacks-issue'
-gem 'locomotivecms_steam', github: 'locomotivecms/steam', ref: 'ba10b57b', require: false
-gem 'locomotivecms_common', github: 'locomotivecms/common', ref: 'c78da158', require: false
+gem 'locomotivecms', github: 'locomotivecms/engine', ref: '87c6636'
+gem 'locomotivecms_steam', github: 'locomotivecms/steam', ref: '70a68f5', require: false
+gem 'locomotivecms_common', github: 'locomotivecms/common', ref: 'c78da15', require: false
 # gem 'locomotivecms_search', github: 'locomotivecms/search', ref: '35e5813'
 gem 'custom_fields', github: 'locomotivecms/custom_fields', ref: '85e9c1a', require: false
 
