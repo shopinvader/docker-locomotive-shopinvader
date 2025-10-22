@@ -192,6 +192,7 @@ SMTP_AUTHENTICATION (default plain)
 
 ```
 SENTRY_DSN
+SENTRY_TRACES_SAMPLE_RATE (default 0.1)
 ```
 
 ## Rake task
